@@ -263,9 +263,102 @@
        ========================================== */
     .hero-section {
       padding: 160px 0 80px;
-      background: radial-gradient(circle at top right, rgba(25, 150, 240, 0.08), transparent 45%),
-                  radial-gradient(circle at bottom left, rgba(19, 84, 140, 0.04), transparent 35%);
+      background: 
+        radial-gradient(circle at 10% 20%, hsla(205, 88%, 52%, 0.06), transparent 40%),
+        radial-gradient(circle at 90% 10%, hsla(186, 76%, 40%, 0.08), transparent 40%),
+        radial-gradient(circle at 50% 80%, hsla(208, 76%, 31%, 0.04), transparent 50%),
+        var(--bg-alabaster);
       position: relative;
+      overflow: hidden;
+    }
+
+    /* Grid overlay for high-end texture */
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(rgba(19, 84, 140, 0.06) 1.5px, transparent 1.5px),
+        linear-gradient(rgba(19, 84, 140, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(19, 84, 140, 0.02) 1px, transparent 1px);
+      background-size: 24px 24px, 72px 72px, 72px 72px;
+      opacity: 0.8;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Subtle abstract gradient blend transition */
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(to top, var(--bg-alabaster), transparent);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 1;
+      mix-blend-mode: multiply;
+      animation: float-orb 20s ease-in-out infinite alternate;
+    }
+
+    .orb-1 {
+      width: 350px;
+      height: 350px;
+      background: hsla(205, 88%, 52%, 0.25);
+      top: -80px;
+      right: 15%;
+      animation-duration: 18s;
+    }
+
+    .orb-2 {
+      width: 450px;
+      height: 450px;
+      background: hsla(208, 76%, 31%, 0.12);
+      bottom: -150px;
+      left: 5%;
+      animation-delay: -6s;
+      animation-duration: 24s;
+    }
+
+    .orb-3 {
+      width: 280px;
+      height: 280px;
+      background: hsla(186, 76%, 40%, 0.18);
+      top: 25%;
+      left: 40%;
+      animation-delay: -12s;
+      animation-duration: 15s;
+    }
+
+    @keyframes float-orb {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      33% {
+        transform: translate(40px, -50px) scale(1.15);
+      }
+      66% {
+        transform: translate(-30px, 30px) scale(0.9);
+      }
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+    }
+
+    /* Keep content on top of orbs and pattern overlay */
+    .hero-section .container {
+      position: relative;
+      z-index: 3;
     }
 
     .hero-grid {
@@ -1657,6 +1750,11 @@
        UNIFIED HERO SECTION
        ========================================== -->
   <section class="hero-section" id="hero">
+    <!-- Glowing Accent Orbs for premium texture -->
+    <div class="hero-glow-orb orb-1"></div>
+    <div class="hero-glow-orb orb-2"></div>
+    <div class="hero-glow-orb orb-3"></div>
+
     <div class="container">
       
       <div class="breadcrumb">
