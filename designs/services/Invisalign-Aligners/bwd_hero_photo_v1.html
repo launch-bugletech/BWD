@@ -1,0 +1,119 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+.hero{font-family:'Inter',sans-serif;border-radius:16px;overflow:hidden;background:#f7f5f2;width:100%;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:480px;}
+.hero-left{padding:52px 48px;display:flex;flex-direction:column;justify-content:center;background:#f7f5f2;}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:#1A8C6C;margin-bottom:22px;}
+.eyebrow-line{width:28px;height:1.5px;background:#1A8C6C;}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1.1;font-weight:600;color:#1a1a18;margin-bottom:20px;letter-spacing:-0.01em;}
+.hero-h1 em{font-style:italic;color:#1A8C6C;}
+.hero-p{font-size:13.5px;line-height:1.75;color:#5a5a55;max-width:380px;margin-bottom:32px;font-weight:300;}
+.hero-actions{display:flex;gap:12px;align-items:center;margin-bottom:36px;flex-wrap:wrap;}
+.btn-main{background:#1A8C6C;color:#fff;padding:13px 26px;border-radius:7px;font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.02em;display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:'Inter',sans-serif;}
+.btn-ghost{background:transparent;color:#1a1a18;padding:12px 22px;border-radius:7px;font-size:13px;border:1px solid #d0cfc9;display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-family:'Inter',sans-serif;cursor:pointer;}
+.trust-row{display:flex;gap:20px;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:11.5px;color:#888882;}
+.trust-item i{font-size:15px;color:#1A8C6C;}
+.hero-right{position:relative;overflow:hidden;min-height:480px;}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;}
+.img-overlay{position:absolute;inset:0;background:rgba(26,28,24,0.12);}
+.img-badge{position:absolute;bottom:28px;left:28px;background:rgba(247,245,242,0.92);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px;max-width:220px;}
+.badge-icon{width:36px;height:36px;background:#1A8C6C;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.badge-icon i{font-size:18px;color:#fff;}
+.badge-num{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#1a1a18;line-height:1;}
+.badge-label{font-size:11px;color:#888882;margin-top:2px;}
+.hero-bottom{border-top:1px solid #e8e6e1;display:grid;grid-template-columns:repeat(4,1fr);}
+.stat-cell{padding:18px 24px;border-right:1px solid #e8e6e1;text-align:center;}
+.stat-cell:last-child{border-right:none;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#1A8C6C;display:block;line-height:1;margin-bottom:4px;}
+.stat-label{font-size:11px;color:#888882;}
+.breadcrumb{padding:12px 24px;background:#f0ede8;border-bottom:1px solid #e8e6e1;display:flex;align-items:center;gap:6px;font-size:11px;color:#aaa8a2;}
+.breadcrumb a{color:#888882;text-decoration:none;}
+.breadcrumb .cur{color:#1a1a18;}
+</style>
+
+<h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Blue Whale Dental — Invisalign Clear Aligners hero section</h2>
+
+<div class="hero">
+  <div class="breadcrumb">
+    <i class="ti ti-home" style="font-size:12px;" aria-hidden="true"></i>
+    <i class="ti ti-chevron-right" style="font-size:11px;" aria-hidden="true"></i>
+    <a href="#">Orthodontics</a>
+    <i class="ti ti-chevron-right" style="font-size:11px;" aria-hidden="true"></i>
+    <span class="cur">Invisalign® Clear Aligners</span>
+  </div>
+
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="eyebrow">
+        <span class="eyebrow-line" aria-hidden="true"></span>
+        Invisalign® in Midtown NYC
+      </div>
+
+      <h1 class="hero-h1">
+        Straighten Your<br>
+        Smile <em>Discreetly</em><br>
+        in Midtown NYC
+      </h1>
+
+      <p class="hero-p">
+        Get a straighter smile without metal braces. At Blue Whale Dental in Midtown Manhattan, we offer Invisalign® clear aligners for adults, teens, and busy NYC professionals — discreet, comfortable, and designed around your lifestyle.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn-main" onclick="sendPrompt('I want to book an Invisalign consultation at Blue Whale Dental in Midtown NYC')">
+          <i class="ti ti-calendar" aria-hidden="true"></i>
+          Book a Free Consultation
+        </button>
+        <a href="tel:+12127521252" class="btn-ghost">
+          <i class="ti ti-phone" aria-hidden="true"></i>
+          212-752-1252
+        </a>
+      </div>
+
+      <div class="trust-row">
+        <span class="trust-item"><i class="ti ti-eye-off" aria-hidden="true"></i> Nearly invisible</span>
+        <span class="trust-item"><i class="ti ti-refresh" aria-hidden="true"></i> Removable trays</span>
+        <span class="trust-item"><i class="ti ti-device-desktop-analytics" aria-hidden="true"></i> Digital planning</span>
+        <span class="trust-item"><i class="ti ti-map-pin" aria-hidden="true"></i> Near Bryant Park</span>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img class="hero-img"
+        src="https://bluewhaledental.com/wp-content/uploads/2025/06/Invisalign.png"
+        alt="Invisalign clear aligners at Blue Whale Dental, Midtown Manhattan"
+        onerror="this.src='https://bluewhaledental.com/wp-content/uploads/2024/10/Invisalign-1.png'"
+      />
+      <div class="img-overlay" aria-hidden="true"></div>
+      <div class="img-badge" aria-label="500+ smiles transformed">
+        <div class="badge-icon"><i class="ti ti-star" aria-hidden="true"></i></div>
+        <div>
+          <div class="badge-num">500+</div>
+          <div class="badge-label">Smiles transformed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bottom" role="list" aria-label="Practice highlights">
+    <div class="stat-cell" role="listitem">
+      <span class="stat-num">10+</span>
+      <span class="stat-label">Years of experience</span>
+    </div>
+    <div class="stat-cell" role="listitem">
+      <span class="stat-num">5★</span>
+      <span class="stat-label">Top-rated dental care</span>
+    </div>
+    <div class="stat-cell" role="listitem">
+      <span class="stat-num">46th St</span>
+      <span class="stat-label">Midtown Manhattan</span>
+    </div>
+    <div class="stat-cell" role="listitem">
+      <span class="stat-num">Flex</span>
+      <span class="stat-label">Hours for busy schedules</span>
+    </div>
+  </div>
+</div>

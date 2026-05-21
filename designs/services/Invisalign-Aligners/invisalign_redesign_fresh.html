@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Invisalign® Clear Aligners in Midtown NYC | Blue Whale Dental</title>
+  <meta name="description" content="Straighten your smile discreetly with Invisalign® clear aligners in Midtown Manhattan near Bryant Park. Boutique care, modern digital planning, and flexible hours at Blue Whale Dental. Schedule your consultation today!">
+  <meta name="robots" content="follow, index">
+  
+  <!-- Open Graph Metadata -->
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Invisalign® Clear Aligners in Midtown NYC | Blue Whale Dental">
+  <meta property="og:description" content="Straighten your smile discreetly with Invisalign® clear aligners in Midtown Manhattan near Bryant Park. Boutique care, modern digital planning, and flexible hours at Blue Whale Dental.">
+  <meta property="og:url" content="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/">
+  <meta property="og:site_name" content="Blue Whale Dental - Midtown's Finest">
+  <meta property="og:image" content="https://bluewhaledental.com/wp-content/uploads/2024/10/Invisalign-1.png">
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Modern Icon Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  
+  <style>
+    /* ==========================================
+       DESIGN SYSTEM & VARIABLES
+       ========================================== */
+    :root {
+      /* Colors */
+      --primary-blue: hsl(208, 76%, 31%);      /* #13548C - Trust Blue */
+      --primary-blue-light: hsl(207, 73%, 43%);/* #1D6BB2 - Highlight Blue */
+      --accent-sky: hsl(205, 88%, 52%);        /* #1A92F5 - Vibrant Sky Blue */
+      --accent-sky-glow: hsla(205, 88%, 52%, 0.15);
+      --bg-alabaster: hsl(210, 24%, 98%);       /* #F8FAFC - Slate Alabaster */
+      --bg-linen: hsl(210, 20%, 95%);           /* #F1F5F9 - Zebra Stripe Slate BG */
+      --text-charcoal: hsl(210, 20%, 12%);       /* #1E293B - High Contrast slate-charcoal */
+      --text-muted: hsl(210, 12%, 46%);          /* #64748B - Secondary slate-muted */
+      --white: #ffffff;
+      --glass-bg: rgba(255, 255, 255, 0.85);
+      --glass-border: rgba(19, 84, 140, 0.08);
+      --glass-shadow: 0 8px 32px 0 rgba(19, 84, 140, 0.05);
+
+      /* Typography */
+      --font-headings: 'Playfair Display', serif;
+      --font-body: 'Outfit', sans-serif;
+      
+      /* Transitions */
+      --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-alabaster);
+      color: var(--text-charcoal);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    input, select, textarea, button {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      outline: none;
+    }
+
+    /* Container Utility */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Text Helpers */
+    .highlight-serif {
+      font-family: var(--font-headings);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--primary-blue-light);
+    }
+
+    /* ==========================================
+       HEADER & NAVIGATION
+       ========================================== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(251, 251, 249, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--glass-border);
+      box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.02);
+      transition: var(--transition-smooth);
+    }
+
+    .header.scrolled {
+      background: var(--white);
+      box-shadow: 0 10px 30px 0 rgba(19, 84, 140, 0.05);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 84px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 48px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-family: var(--font-headings);
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--primary-blue);
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 0.7rem;
+      font-family: var(--font-body);
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-charcoal);
+      position: relative;
+      padding: 8px 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-blue-light);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-link:hover {
+      color: var(--primary-blue-light);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-call {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--primary-blue-light);
+    }
+
+    .btn-call i {
+      font-size: 1.2rem;
+    }
+
+    .btn-call:hover {
+      color: var(--accent-sky);
+    }
+
+    .btn-primary {
+      background: var(--primary-blue);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid var(--primary-blue);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 14px 0 rgba(19, 84, 140, 0.15);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-sky);
+      border-color: var(--accent-sky);
+      color: var(--primary-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px 0 var(--accent-sky-glow);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-toggle {
+      display: none;
+      font-size: 1.8rem;
+      color: var(--primary-blue);
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* ==========================================
+       UNIFIED HERO SECTION
+       ========================================== */
+    .hero-section {
+      padding: 160px 0 80px;
+      background: radial-gradient(circle at top right, rgba(25, 150, 240, 0.08), transparent 45%),
+                  radial-gradient(circle at bottom left, rgba(19, 84, 140, 0.04), transparent 35%);
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    /* Left Value Prop */
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .breadcrumb i {
+      font-size: 0.9rem;
+    }
+
+    .breadcrumb .active-crumb {
+      color: var(--primary-blue-light);
+    }
+
+    .eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: hsla(208, 76%, 31%, 0.06);
+      border: 1px solid hsla(208, 76%, 31%, 0.1);
+      color: var(--primary-blue);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      width: fit-content;
+      margin-bottom: 20px;
+      animation: pulse-badge 3s infinite alternate;
+    }
+
+    @keyframes pulse-badge {
+      0% { box-shadow: 0 0 0 0 rgba(19, 84, 140, 0.05); }
+      100% { box-shadow: 0 0 0 8px rgba(15, 110, 86, 0.0); }
+    }
+
+    .hero-title {
+      font-family: var(--font-headings);
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text-charcoal);
+      margin-bottom: 20px;
+      letter-spacing: -0.015em;
+    }
+
+    .hero-p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 32px;
+      font-weight: 300;
+      max-width: 580px;
+    }
+
+    .hero-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--text-charcoal);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid hsl(48, 10%, 82%);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary-blue-light);
+      color: var(--primary-blue-light);
+      background: rgba(19, 84, 140, 0.02);
+      transform: translateY(-2px);
+    }
+
+    .trust-bullets {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 20px;
+      border-top: 1px solid var(--glass-border);
+      padding-top: 32px;
+    }
+
+    .trust-bullet {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-charcoal);
+    }
+
+    .trust-bullet i {
+      color: var(--primary-blue-light);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    /* Right Column - Booking Card Form */
+    .hero-form-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 20px 40px 0 rgba(19, 84, 140, 0.05), 
+                  inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 36px;
+      position: relative;
+    }
+
+    .hero-form-card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      z-index: -1;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(25, 150, 240, 0.3), rgba(19, 84, 140, 0.05));
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .form-title {
+      font-family: var(--font-headings);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 6px;
+    }
+
+    .form-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .booking-form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .form-group {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .form-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .form-input-wrapper i {
+      position: absolute;
+      left: 14px;
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      pointer-events: none;
+    }
+
+    .form-input, .form-select {
+      width: 100%;
+      background: rgba(19, 84, 140, 0.03);
+      border: 1px solid rgba(19, 84, 140, 0.08);
+      border-radius: 8px;
+      padding: 12px 14px 12px 42px;
+      color: var(--text-charcoal);
+      font-size: 0.95rem;
+      font-weight: 400;
+      transition: var(--transition-smooth);
+    }
+
+    .form-input:focus, .form-select:focus {
+      background: var(--white);
+      border-color: var(--primary-blue-light);
+      box-shadow: 0 0 0 4px hsla(208, 76%, 31%, 0.08);
+    }
+
+    .form-select {
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .select-arrow {
+      position: absolute;
+      right: 14px;
+      color: var(--text-muted);
+      pointer-events: none;
+      font-size: 1.1rem;
+    }
+
+    .form-btn {
+      width: 100%;
+      background: var(--primary-blue);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      padding: 14px 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 14px 0 rgba(19, 84, 140, 0.15);
+      margin-top: 10px;
+    }
+
+    .form-btn:hover {
+      background: var(--accent-sky);
+      color: var(--primary-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px 0 var(--accent-sky-glow);
+    }
+
+    .form-btn i {
+      font-size: 1.25rem;
+    }
+
+    .form-privacy-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 16px;
+      font-weight: 500;
+    }
+
+    .form-privacy-note i {
+      color: var(--primary-blue-light);
+      font-size: 0.95rem;
+    }
+
+    /* Stat highlights bar under Hero */
+    .hero-stats-row {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .stat-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 8px 24px 0 rgba(19, 84, 140, 0.03);
+      transition: var(--transition-smooth);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(25, 150, 240, 0.3);
+      box-shadow: 0 12px 30px 0 rgba(19, 84, 140, 0.05);
+    }
+
+    .stat-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: hsla(208, 76%, 31%, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-blue-light);
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      transition: var(--transition-smooth);
+    }
+
+    .stat-card:hover .stat-icon-box {
+      background: var(--primary-blue-light);
+      color: var(--white);
+    }
+
+    .stat-val {
+      font-family: var(--font-headings);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .stat-lbl {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    /* ==========================================
+       SECTION BASIC STYLES
+       ========================================== */
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-zebra {
+      background-color: var(--bg-linen);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--primary-blue-light);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-headings);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--text-charcoal);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ==========================================
+       "HOW INVISALIGN WORKS" SECTION
+       ========================================== */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro-image-container {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px 0 rgba(19, 84, 140, 0.08);
+      background-color: var(--white);
+    }
+
+    .intro-img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 8s ease;
+    }
+
+    .intro-image-container:hover .intro-img {
+      transform: scale(1.08);
+    }
+
+    .image-tag-floating {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 30px 0 rgba(0,0,0,0.08);
+      border: 1px solid var(--glass-border);
+    }
+
+    .floating-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: hsla(208, 76%, 31%, 0.05);
+      color: var(--primary-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    .floating-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-charcoal);
+    }
+
+    .floating-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .intro-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .intro-card {
+      background: var(--white);
+      border-radius: 12px;
+      border: 1px solid var(--glass-border);
+      padding: 24px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      box-shadow: 0 6px 18px 0 rgba(19, 84, 140, 0.02);
+      transition: var(--transition-smooth);
+    }
+
+    .intro-card:hover {
+      transform: translateX(8px);
+      border-color: rgba(25, 150, 240, 0.3);
+      box-shadow: 0 8px 24px 0 rgba(19, 84, 140, 0.04);
+    }
+
+    .intro-card-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary-blue);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .intro-card-title {
+      font-family: var(--font-headings);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 6px;
+    }
+
+    .intro-card-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================
+       BENEFITS GRID SECTION
+       ========================================== */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .benefit-card {
+      background: var(--white);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 8px 24px 0 rgba(19, 84, 140, 0.02);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .benefit-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-blue), var(--accent-sky));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--transition-smooth);
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(25, 150, 240, 0.2);
+      box-shadow: 0 16px 36px 0 rgba(19, 84, 140, 0.05);
+    }
+
+    .benefit-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .benefit-icon-wrapper {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: hsla(208, 76%, 31%, 0.05);
+      color: var(--primary-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      transition: var(--transition-smooth);
+    }
+
+    .benefit-card:hover .benefit-icon-wrapper {
+      background: var(--primary-blue);
+      color: var(--white);
+      transform: rotateY(180deg);
+    }
+
+    .benefit-title {
+      font-family: var(--font-headings);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 12px;
+    }
+
+    .benefit-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* ==========================================
+       TREATMENT TIMELINE PROCESS
+       ========================================== */
+    .timeline-container {
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .timeline-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary-blue) 0%, rgba(25, 150, 240, 0.4) 70%, transparent 100%);
+      transform: translateX(-50%);
+    }
+
+    .timeline-step {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-bottom: 80px;
+      position: relative;
+      align-items: center;
+    }
+
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 3px solid var(--primary-blue);
+      box-shadow: 0 4px 10px 0 rgba(19, 84, 140, 0.15);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--primary-blue);
+      transition: var(--transition-smooth);
+    }
+
+    .timeline-step:hover .timeline-badge {
+      background: var(--accent-sky);
+      border-color: var(--accent-sky);
+      color: var(--primary-blue);
+      transform: translate(-50%, -50%) scale(1.15);
+    }
+
+    .timeline-card {
+      background: var(--white);
+      border-radius: 16px;
+      border: 1px solid var(--glass-border);
+      padding: 36px;
+      box-shadow: 0 10px 30px 0 rgba(19, 84, 140, 0.02);
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .timeline-card:hover {
+      border-color: rgba(25, 150, 240, 0.3);
+      box-shadow: 0 16px 40px 0 rgba(19, 84, 140, 0.05);
+    }
+
+    .timeline-card-title {
+      font-family: var(--font-headings);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .timeline-card-title i {
+      font-size: 1.5rem;
+      color: var(--primary-blue-light);
+    }
+
+    .timeline-card-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .timeline-visual {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px 0 rgba(0,0,0,0.06);
+    }
+
+    .timeline-visual img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    /* Alternate layouts */
+    .timeline-step:nth-child(even) .timeline-card {
+      grid-column: 2;
+    }
+
+    .timeline-step:nth-child(even) .timeline-visual {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .timeline-step:nth-child(odd) .timeline-card {
+      grid-column: 1;
+    }
+
+    .timeline-step:nth-child(odd) .timeline-visual {
+      grid-column: 2;
+    }
+
+    /* ==========================================
+       WHY CHOOSE BLUE WHALE / TECH SECTION
+       ========================================== */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .showcase-visual {
+      position: relative;
+    }
+
+    .showcase-img-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 24px 48px 0 rgba(15, 110, 86, 0.1);
+      background-color: var(--white);
+    }
+
+    .showcase-img-wrap img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .floating-credential-card {
+      position: absolute;
+      top: 40px;
+      right: -30px;
+      background: var(--primary-blue);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 16px 24px;
+      box-shadow: 0 12px 30px 0 rgba(19, 84, 140, 0.2);
+      max-width: 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      animation: float-badge 4s ease-in-out infinite;
+    }
+
+    @keyframes float-badge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .credential-number {
+      font-family: var(--font-headings);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent-sky);
+    }
+
+    .credential-lbl {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.3;
+    }
+
+    .showcase-features {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .showcase-feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .feat-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: hsla(208, 76%, 31%, 0.05);
+      color: var(--primary-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .feat-text-box h3 {
+      font-family: var(--font-headings);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 6px;
+    }
+
+    .feat-text-box p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* ==========================================
+       REAL STORIES / TESTIMONIALS SECTION
+       ========================================== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 8px 24px 0 rgba(0,0,0,0.01);
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px 0 rgba(19, 84, 140, 0.04);
+      border-color: rgba(25, 150, 240, 0.2);
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      font-size: 2.2rem;
+      color: hsla(208, 76%, 31%, 0.05);
+    }
+
+    .rating-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 20px;
+      color: #FFB800; /* Rich gold */
+      font-size: 1rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.95rem;
+      color: var(--text-charcoal);
+      line-height: 1.7;
+      margin-bottom: 24px;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .testimonial-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--glass-border);
+      padding-top: 20px;
+    }
+
+    .meta-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: hsla(208, 76%, 31%, 0.08);
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .meta-details h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-charcoal);
+    }
+
+    .meta-details span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ==========================================
+       FAQ SECTION (ACCORDIONS)
+       ========================================== */
+    .faq-max-width {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px 0 rgba(0,0,0,0.01);
+      transition: var(--transition-smooth);
+    }
+
+    .faq-item.active {
+      border-color: rgba(25, 150, 240, 0.3);
+      box-shadow: 0 8px 24px 0 rgba(19, 84, 140, 0.03);
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px;
+      cursor: pointer;
+      font-family: var(--font-headings);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      transition: var(--transition-smooth);
+    }
+
+    .faq-question:hover {
+      color: var(--primary-blue-light);
+    }
+
+    .faq-toggle-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: hsla(208, 76%, 31%, 0.05);
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: var(--transition-smooth);
+    }
+
+    .faq-item.active .faq-toggle-icon {
+      background: var(--primary-blue);
+      color: var(--white);
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+      background-color: var(--bg-alabaster);
+    }
+
+    .faq-answer-inner {
+      padding: 0 24px 24px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* ==========================================
+       CTA BLOCK BANNER
+       ========================================== */
+    .cta-banner-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--primary-blue), hsl(166, 76%, 16%));
+      color: var(--white);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 20%, hsla(205, 88%, 52%, 0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-banner-content {
+      position: relative;
+      z-index: 10;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-banner-title {
+      font-family: var(--font-headings);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .cta-banner-text {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 36px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .cta-banner-btns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--primary-blue);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid var(--white);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1);
+    }
+
+    .btn-white:hover {
+      background: var(--accent-sky);
+      border-color: var(--accent-sky);
+      color: var(--primary-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px 0 var(--accent-sky-glow);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      padding: 13px 26px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-outline-white:hover {
+      border-color: var(--white);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================
+       FOOTER STYLING
+       ========================================== */
+    .footer {
+      background: var(--text-charcoal);
+      color: var(--white);
+      padding: 80px 0 30px;
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-about-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .footer-logo-text {
+      font-family: var(--font-headings);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--accent-sky);
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .footer-logo-text span {
+      display: block;
+      font-size: 0.65rem;
+      font-family: var(--font-body);
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 2px;
+    }
+
+    .footer-about-p {
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .footer-h3 {
+      font-family: var(--font-headings);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .footer-h3::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background-color: var(--accent-sky);
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.65);
+      transition: var(--transition-smooth);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-sky);
+      transform: translateX(4px);
+    }
+
+    .footer-contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.5;
+    }
+
+    .footer-contact-item i {
+      color: var(--accent-sky);
+      font-size: 1.2rem;
+      margin-top: 2px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--accent-sky);
+    }
+
+    /* ==========================================
+       RESPONSIVE ADJUSTMENTS
+       ========================================== */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .hero-section {
+        padding: 130px 0 60px;
+      }
+
+      .hero-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 40px;
+      }
+
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 15px;
+      }
+
+      .nav-links, .nav-cta {
+        display: none; /* In production, you would trigger a beautiful mobile tray menu */
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .hero-title {
+        font-size: 2.4rem;
+      }
+
+      .timeline-step {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .timeline-line {
+        left: 20px;
+      }
+
+      .timeline-badge {
+        left: 20px;
+        top: 0;
+        transform: translate(-50%, 0);
+      }
+
+      .timeline-step:hover .timeline-badge {
+        transform: translate(-50%, 0) scale(1.1);
+      }
+
+      .timeline-step:nth-child(even) .timeline-card,
+      .timeline-step:nth-child(odd) .timeline-card {
+        grid-column: 1;
+        margin-left: 40px;
+      }
+
+      .timeline-step:nth-child(even) .timeline-visual,
+      .timeline-step:nth-child(odd) .timeline-visual {
+        grid-column: 1;
+        margin-left: 40px;
+      }
+
+      .intro-grid, .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .intro-img, .showcase-img-wrap img {
+        height: 320px;
+      }
+
+      .floating-credential-card {
+        right: 10px;
+        top: 10px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-bottom-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats-row {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-bullets {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVIGATION
+       ========================================== -->
+  <header class="header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="https://bluewhaledental.com/" class="logo-area" aria-label="Blue Whale Dental Home">
+        <img class="logo-img" src="https://bluewhaledental.com/wp-content/uploads/2024/10/cropped-Blue-Whale-Dental-Logo-29-e1728293338603-192x192.png" alt="Blue Whale Dental Symbol">
+        <div class="logo-text">
+          Blue Whale Dental
+          <span>Midtown's Finest Care</span>
+        </div>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="https://bluewhaledental.com/" class="nav-link">Home</a></li>
+          <li><a href="https://bluewhaledental.com/about-us/" class="nav-link">About Us</a></li>
+          <li><a href="https://bluewhaledental.com/services/" class="nav-link">Services</a></li>
+          <li><a href="https://bluewhaledental.com/advanced-dental-technology/" class="nav-link">Technology</a></li>
+          <li><a href="https://bluewhaledental.com/trusted-dentist-near-me-in-midtown-manhattan/" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="tel:+12127521252" class="btn-call" aria-label="Call Blue Whale Dental">
+          <i class="ti ti-phone"></i>
+          <span>212-752-1252</span>
+        </a>
+        <a href="#consultation" class="btn-primary">
+          <i class="ti ti-calendar-event"></i>
+          Book Appointment
+        </a>
+      </div>
+
+      <!-- Menu burger for mobile -->
+      <div class="mobile-toggle" aria-label="Toggle Mobile Menu" role="button">
+        <i class="ti ti-menu-2"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       UNIFIED HERO SECTION
+       ========================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      
+      <div class="breadcrumb">
+        <a href="https://bluewhaledental.com/"><i class="ti ti-home" aria-hidden="true"></i> Home</a>
+        <i class="ti ti-chevron-right" aria-hidden="true"></i>
+        <a href="https://bluewhaledental.com/services/">Services</a>
+        <i class="ti ti-chevron-right" aria-hidden="true"></i>
+        <span class="active-crumb">Invisalign® Aligners</span>
+      </div>
+
+      <div class="hero-grid">
+        
+        <!-- Value Prop (Left Column) -->
+        <div class="hero-content">
+          <div class="eyebrow-badge">
+            <i class="ti ti-sparkles" aria-hidden="true"></i> Certified Invisalign® Provider
+          </div>
+          <h1 class="hero-title">
+            Straighten Your Smile <span class="highlight-serif">Discreetly</span> with Invisalign® in Midtown NYC
+          </h1>
+          <p class="hero-p">
+            Get a straighter smile without metal braces. At Blue Whale Dental in Midtown Manhattan, we offer Invisalign® clear aligners for adults, teens, and busy NYC professionals who want a discreet, comfortable, and removable orthodontic treatment. Our team uses modern digital planning and personalized boutique care to fit seamlessly into your lifestyle.
+          </p>
+          
+          <div class="hero-actions-row">
+            <a href="#consultation" class="btn-primary">
+              <i class="ti ti-calendar"></i> Book Invisalign Consultation
+            </a>
+            <a href="tel:+12127521252" class="btn-secondary">
+              <i class="ti ti-phone"></i> Call 212-752-1252
+            </a>
+          </div>
+
+          <div class="trust-bullets">
+            <div class="trust-bullet">
+              <i class="ti ti-circle-check" aria-hidden="true"></i>
+              <span>Clear, removable aligners</span>
+            </div>
+            <div class="trust-bullet">
+              <i class="ti ti-circle-check" aria-hidden="true"></i>
+              <span>Advanced 3D digital planning</span>
+            </div>
+            <div class="trust-bullet">
+              <i class="ti ti-circle-check" aria-hidden="true"></i>
+              <span>Convenient Midtown Manhattan location</span>
+            </div>
+            <div class="trust-bullet">
+              <i class="ti ti-circle-check" aria-hidden="true"></i>
+              <span>Flexible appointments for busy hours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integrated Fast-Track Booking Card (Right Column) -->
+        <div class="hero-form-card" id="consultation">
+          <div class="form-header">
+            <h2 class="form-title">Schedule Consultation</h2>
+            <p class="form-subtitle">Lock in your personalized smile evaluation</p>
+          </div>
+          
+          <form class="booking-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Your Invisalign consultation request has been received. Our team will contact you shortly.');">
+            
+            <div class="form-group">
+              <label class="form-label" for="formName">Full Name</label>
+              <div class="form-input-wrapper">
+                <i class="ti ti-user" aria-hidden="true"></i>
+                <input type="text" id="formName" class="form-input" placeholder="Type your full name" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formEmail">Email Address</label>
+              <div class="form-input-wrapper">
+                <i class="ti ti-mail" aria-hidden="true"></i>
+                <input type="email" id="formEmail" class="form-input" placeholder="name@company.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formPhone">Phone Number</label>
+              <div class="form-input-wrapper">
+                <i class="ti ti-phone" aria-hidden="true"></i>
+                <input type="tel" id="formPhone" class="form-input" placeholder="Type your phone number" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formService">Selected Treatment</label>
+              <div class="form-input-wrapper">
+                <i class="ti ti-settings" aria-hidden="true"></i>
+                <select id="formService" class="form-select" required>
+                  <option value="invisalign" selected>Invisalign® Clear Aligners</option>
+                  <option value="cosmetic">Cosmetic Smile Makeover</option>
+                  <option value="veneers">Porcelain Veneers</option>
+                  <option value="implants">Dental Implants</option>
+                  <option value="whitening">Teeth Whitening</option>
+                </select>
+                <i class="ti ti-chevron-down select-arrow" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <button type="submit" class="form-btn">
+              <span>Book Invisalign Consultation</span>
+              <i class="ti ti-arrow-right" aria-hidden="true"></i>
+            </button>
+            
+            <div class="form-privacy-note">
+              <i class="ti ti-shield-check" aria-hidden="true"></i>
+              <span>100% HIPAA-Compliant & Secure Data Handling</span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Credential Stat Bar Under Hero -->
+      <div class="hero-stats-row">
+        <div class="stat-card">
+          <div class="stat-icon-box"><i class="ti ti-star" aria-hidden="true"></i></div>
+          <div>
+            <div class="stat-val">500+</div>
+            <div class="stat-lbl">Smiles Transformed</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-box"><i class="ti ti-award" aria-hidden="true"></i></div>
+          <div>
+            <div class="stat-val">10+</div>
+            <div class="stat-lbl">Years of Experience</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-box"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
+          <div>
+            <div class="stat-val">Midtown</div>
+            <div class="stat-lbl">10 W. 46th St. NYC</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon-box"><i class="ti ti-clock" aria-hidden="true"></i></div>
+          <div>
+            <div class="stat-val">Flex</div>
+            <div class="stat-lbl">Hours for Busy Schedules</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       HOW INVISALIGN WORKS
+       ========================================== -->
+  <section class="section section-zebra" id="intro">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-eyebrow">Advanced Orthodontics</span>
+        <h2 class="section-title">Discreet, Comfortable Teeth Straightening</h2>
+        <p class="section-subtitle">
+          Invisalign® is a groundbreaking system that offers a modern, innovative approach to achieving a beautifully straight smile. At Blue Whale Dental, we proudly offer clear aligners as a highly aesthetic alternative to traditional braces.
+        </p>
+      </div>
+
+      <div class="intro-grid">
+        
+        <!-- Image block with floating tags -->
+        <div class="intro-image-container">
+          <img class="intro-img" src="https://bluewhaledental.com/wp-content/uploads/2025/06/Invisalign.png" alt="Invisalign Aligners treatment at Blue Whale Dental Midtown NYC" onerror="this.src='https://bluewhaledental.com/wp-content/uploads/2024/10/Invisalign-1.png'">
+          
+          <div class="image-tag-floating">
+            <div class="floating-icon"><i class="ti ti-eye-off"></i></div>
+            <div>
+              <div class="floating-title">Virtually Invisible</div>
+              <div class="floating-text">Discreet BPA-free plastic</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Descriptive Steps -->
+        <div class="intro-content">
+          
+          <div class="intro-card">
+            <div class="intro-card-num">1</div>
+            <div>
+              <h3 class="intro-card-title">Tailored Digital Mapping</h3>
+              <p class="intro-card-desc">
+                Using advanced imaging technology, we map out the exact movements of your teeth throughout the treatment, ensuring precise and customized outcomes.
+              </p>
+            </div>
+          </div>
+
+          <div class="intro-card">
+            <div class="intro-card-num">2</div>
+            <div>
+              <h3 class="intro-card-title">Comfortable, Removable Trays</h3>
+              <p class="intro-card-desc">
+                The clear trays can be popped out easily for meals, brushing, and flossing. You get complete lifestyle freedom with zero food restrictions.
+              </p>
+            </div>
+          </div>
+
+          <div class="intro-card">
+            <div class="intro-card-num">3</div>
+            <div>
+              <h3 class="intro-card-title">Professional Care Monitoring</h3>
+              <p class="intro-card-desc">
+                Our highly skilled dental team closely monitors your progressive shifts during brief check-ups, keeping your aligners on the fastest track to success.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       BENEFITS OF INVISALIGN
+       ========================================== -->
+  <section class="section" id="benefits">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-eyebrow">Why Choose Invisalign</span>
+        <h2 class="section-title">Designed to Fit Your NYC Lifestyle</h2>
+        <p class="section-subtitle">
+          Enjoy the benefits of clear aligner orthodontic treatment designed to fit around your daily schedule, professional meetings, and social events.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper"><i class="ti ti-eye-off" aria-hidden="true"></i></div>
+          <h3 class="benefit-title">Discreet Looks</h3>
+          <p class="benefit-desc">
+            The medical-grade clear aligners are virtually invisible. Most people won't even realize you are wearing orthodontic trays.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper"><i class="ti ti-mood-smile" aria-hidden="true"></i></div>
+          <h3 class="benefit-title">Comfortable Fit</h3>
+          <p class="benefit-desc">
+            Laser-trimmed and custom-molded from smooth, BPA-free SmartTrack® plastic, eliminating painful wires or bracket irritation.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper"><i class="ti ti-cookie" aria-hidden="true"></i></div>
+          <h3 class="benefit-title">Removable Design</h3>
+          <p class="benefit-desc">
+            Easily remove your trays to eat your favorite foods, brush, and floss normally, keeping oral hygiene immaculate throughout the journey.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper"><i class="ti ti-device-desktop-analytics" aria-hidden="true"></i></div>
+          <h3 class="benefit-title">Custom Planning</h3>
+          <p class="benefit-desc">
+            Each tray set is uniquely structured using smart algorithms to map exact, gentle teeth movements for highly optimized shifts.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       REBUILT TIMELINE PROCESS
+       ========================================== -->
+  <section class="section section-zebra" id="process">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-eyebrow">Your Smile Journey</span>
+        <h2 class="section-title">The Invisalign® Treatment Process</h2>
+        <p class="section-subtitle">
+          According to the American Association of Orthodontists, clear aligners like Invisalign are a highly effective, clinically-proven alternative to brackets. Here is how we build your dream smile in 4 simple stages.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-line" aria-hidden="true"></div>
+        
+        <!-- Step 1 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">1</div>
+          <div class="timeline-card">
+            <h3 class="timeline-card-title"><i class="ti ti-message-2" aria-hidden="true"></i> Initial Smile Consultation</h3>
+            <p class="timeline-card-desc">
+              We conduct a comprehensive evaluation of your oral architecture, discuss your target cosmetic goals, and determine if Invisalign® aligners are the absolute best match for your teeth.
+            </p>
+          </div>
+          <div class="timeline-visual">
+            <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Invisalign-1-1024x1024.png" alt="Invisalign Consultation at Blue Whale Dental Midtown Manhattan">
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">2</div>
+          <div class="timeline-card">
+            <h3 class="timeline-card-title"><i class="ti ti-scan" aria-hidden="true"></i> Digital 3D Scanning</h3>
+            <p class="timeline-card-desc">
+              Using our high-definition iTero digital scanners, we create a highly precise, comfortable 3D model of your teeth. No messy putty or gagging. We generate a digital mock-up preview showing exactly how your teeth will shift and your final smile.
+            </p>
+          </div>
+          <div class="timeline-visual">
+            <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Aligners-1024x1024.png" alt="Digital 3D Smile Scanning in NYC office">
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">3</div>
+          <div class="timeline-card">
+            <h3 class="timeline-card-title"><i class="ti ti-device-dentist" aria-hidden="true"></i> Fitting & Adjustments</h3>
+            <p class="timeline-card-desc">
+              Once your custom-designed clear trays arrive, we will fit the initial set, provide detailed instructions on home care, and coordinate brief tracking check-ups to monitor progress and issue subsequent aligner batches.
+            </p>
+          </div>
+          <div class="timeline-visual">
+            <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Comfortable-Fit.jpg" alt="Invisalign Aligners Fitting in Midtown Manhattan">
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">4</div>
+          <div class="timeline-card">
+            <h3 class="timeline-card-title"><i class="ti ti-discount-check" aria-hidden="true"></i> Lock-in Your Beautiful Smile</h3>
+            <p class="timeline-card-desc">
+              Once your teeth have completed their customized shifting schedule, we will provide bespoke clear retainers to protect and maintain your newly straightened smile, ensuring your teeth stay perfectly locked in place.
+            </p>
+          </div>
+          <div class="timeline-visual">
+            <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Discreet-Appearance.jpg" alt="Smile completion and retainers Midtown dental office">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WHY CHOOSE BLUE WHALE / TECH SHOWCASE
+       ========================================== -->
+  <section class="section" id="why-choose">
+    <div class="container">
+      
+      <div class="showcase-grid">
+        
+        <!-- Left Column: Copy & Highlights -->
+        <div class="showcase-features">
+          <div>
+            <span class="section-eyebrow">The Blue Whale Standard</span>
+            <h2 class="section-title" style="margin-bottom: 20px;">Why Choose Invisalign® at Blue Whale Dental?</h2>
+            <p class="hero-p" style="margin-bottom: 10px;">
+              At Blue Whale Dental, we combine advanced digital dental technology with boutique-level personalized care. Our office is tailored specifically around the comfort and convenience of Manhattan professionals.
+            </p>
+          </div>
+
+          <div class="showcase-feat-item">
+            <div class="feat-icon-box"><i class="ti ti-brand-zoom" aria-hidden="true"></i></div>
+            <div class="feat-text-box">
+              <h3>Advanced 3D Smile Modeling</h3>
+              <p>We leverage cutting-edge computer-guided design so you can visualize your completed teeth straightening progress before your custom aligners are even made.</p>
+            </div>
+          </div>
+
+          <div class="showcase-feat-item">
+            <div class="feat-icon-box"><i class="ti ti-map-pins" aria-hidden="true"></i></div>
+            <div class="feat-text-box">
+              <h3>Boutique Midtown NYC Comfort</h3>
+              <p>Located at 10 W. 46th St near Bryant Park & Grand Central, we offer highly flexible hours (early mornings & evenings) that seamlessly align with a busy career.</p>
+            </div>
+          </div>
+
+          <div class="showcase-feat-item">
+            <div class="feat-icon-box"><i class="ti ti-heart-handshake" aria-hidden="true"></i></div>
+            <div class="feat-text-box">
+              <h3>Personalized Gentle Dental Care</h3>
+              <p>Our practice treats you with a big heart. We pride ourselves on creating a calming, supportive, and stress-free environment for every patient.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual with Badge -->
+        <div class="showcase-visual">
+          <div class="showcase-img-wrap">
+            <img src="https://bluewhaledental.com/wp-content/uploads/2025/06/Invisalign-819x1024.png" alt="Happy patient with straight smile at Blue Whale Dental, Midtown NYC" onerror="this.src='https://bluewhaledental.com/wp-content/uploads/2024/10/Invisalign-1.png'">
+          </div>
+          
+          <div class="floating-credential-card">
+            <span class="credential-number">5 ★</span>
+            <span class="credential-lbl">Top-Rated Boutique Practice in Midtown Manhattan</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       REAL STORIES / TESTIMONIALS SECTION
+       ========================================== -->
+  <section class="section section-zebra" id="stories">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-eyebrow">Patient Success</span>
+        <h2 class="section-title">Real Stories, Real Smiles</h2>
+        <p class="section-subtitle">
+          See how Dr. Carmen and the Blue Whale Dental team have transformed smiles and boosted confidence for patients throughout Midtown Manhattan.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        
+        <div class="testimonial-card">
+          <i class="ti ti-quote quote-icon" aria-hidden="true"></i>
+          <div>
+            <div class="rating-stars" aria-label="5 star review">
+              <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+            </div>
+            <p class="testimonial-text">
+              "Dr. Carmen took the time to explain every single step of the Invisalign treatment, ensuring I was fully informed and completely comfortable. The results have been absolutely amazing!"
+            </p>
+          </div>
+          <div class="testimonial-meta">
+            <div class="meta-avatar">MC</div>
+            <div class="meta-details">
+              <h4>Matthew C.</h4>
+              <span>NYC Professional</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <i class="ti ti-quote quote-icon" aria-hidden="true"></i>
+          <div>
+            <div class="rating-stars" aria-label="5 star review">
+              <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+            </div>
+            <p class="testimonial-text">
+              "I love Dr. Cuello and her staff. The office is incredibly clean and modern and their digital scanning technology is very advanced. Getting aligners here was a breeze!"
+            </p>
+          </div>
+          <div class="testimonial-meta">
+            <div class="meta-avatar">JM</div>
+            <div class="meta-details">
+              <h4>John M.</h4>
+              <span>Midtown Manhattan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <i class="ti ti-quote quote-icon" aria-hidden="true"></i>
+          <div>
+            <div class="rating-stars" aria-label="5 star review">
+              <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i>
+            </div>
+            <p class="testimonial-text">
+              "I had a very pleasant experience with Dr. Carmen. She has extremely gentle hands and is highly knowledgeable. The flexible hours allowed me to book appointments before office hours."
+            </p>
+          </div>
+          <div class="testimonial-meta">
+            <div class="meta-avatar">NN</div>
+            <div class="meta-details">
+              <h4>Matt N.</h4>
+              <span>Bryant Park Resident</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FAQ ACCORDION SECTION
+       ========================================== -->
+  <section class="section" id="faqs">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-eyebrow">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Have more questions about Invisalign clear aligners in Midtown NYC? Find quick answers to the questions we receive most frequently.
+        </p>
+      </div>
+
+      <div class="faq-max-width">
+        <div class="faq-list">
+          
+          <div class="faq-item">
+            <div class="faq-question" role="button" aria-expanded="false">
+              <span>Is Invisalign® painful?</span>
+              <span class="faq-toggle-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Most patients experience a mild, temporary feeling of pressure during the first few days of starting a new aligner tray set. This is a positive sign that the aligners are gently shifting your teeth into their proper positions. The smooth SmartTrack® plastic is significantly more comfortable than traditional metal brackets and wires.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" role="button" aria-expanded="false">
+              <span>How long does Invisalign® treatment take?</span>
+              <span class="faq-toggle-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                The duration of Invisalign treatment varies depending on the complexity of your case. On average, a standard adult treatment takes between 12 to 18 months, though noticeable results can begin appearing in just a few weeks. Consistency in wearing your trays for 20-22 hours a day is the single most important factor.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" role="button" aria-expanded="false">
+              <span>How often do I need to wear my clear aligners?</span>
+              <span class="faq-toggle-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                For optimal results, aligners should be worn between 20 to 22 hours per day. They should only be removed for meals, snacks, drinking hot or sugary beverages, and daily brushing and flossing routines.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" role="button" aria-expanded="false">
+              <span>Will Invisalign® affect my speech?</span>
+              <span class="faq-toggle-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Some patients may experience a very slight, temporary lisp for the first day or two of starting Invisalign treatment as their tongue adjusts to the trays. This minor effect disappears rapidly as the tongue adapts, and your normal speech patterns will quickly return.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" role="button" aria-expanded="false">
+              <span>Does dental insurance cover Invisalign®?</span>
+              <span class="faq-toggle-icon"><i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Many modern dental insurance policies provide partial coverage for orthodontic treatments, including Invisalign. At Blue Whale Dental, we accept a wide range of insurances and offer flexible internal payment plans to make your dental care stress-free and highly affordable.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CTA BLOCK BANNER
+       ========================================== -->
+  <section class="cta-banner-section">
+    <div class="container cta-banner-content">
+      <h2 class="cta-banner-title">Ready to Make a Splash with a Straighter Smile?</h2>
+      <p class="cta-banner-text">
+        Book your digital smile scanning consultation today at Blue Whale Dental in Midtown Manhattan. Our experienced team is ready to guide you to a confident, radiant smile.
+      </p>
+      
+      <div class="cta-banner-btns">
+        <a href="#hero" class="btn-white">
+          <i class="ti ti-calendar-event"></i> Schedule Your Consultation
+        </a>
+        <a href="tel:+12127521252" class="btn-outline-white">
+          <i class="ti ti-phone"></i> Call 212-752-1252
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- About Column -->
+        <div class="footer-col">
+          <div class="footer-about-logo">
+            <img class="logo-img" src="https://bluewhaledental.com/wp-content/uploads/2024/10/cropped-Blue-Whale-Dental-Logo-29-e1728293338603-192x192.png" alt="Blue Whale Logo Light">
+            <div class="footer-logo-text">
+              Blue Whale Dental
+              <span>Midtown's Finest Care</span>
+            </div>
+          </div>
+          <p class="footer-about-p">
+            At Blue Whale Dental in Midtown NYC, we combine cutting-edge technology with highly personalized boutique care to create a relaxing, stress-free experience. Your comfort is our top priority because we're the dentists with big hearts.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-h3">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="https://bluewhaledental.com/"><i class="ti ti-chevron-right" aria-hidden="true"></i> Home</a></li>
+            <li><a href="https://bluewhaledental.com/about-us/"><i class="ti ti-chevron-right" aria-hidden="true"></i> About Us</a></li>
+            <li><a href="https://bluewhaledental.com/services/"><i class="ti ti-chevron-right" aria-hidden="true"></i> Services</a></li>
+            <li><a href="https://bluewhaledental.com/advanced-dental-technology/"><i class="ti ti-chevron-right" aria-hidden="true"></i> Technology</a></li>
+            <li><a href="https://bluewhaledental.com/trusted-dentist-near-me-in-midtown-manhattan/"><i class="ti ti-chevron-right" aria-hidden="true"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h3 class="footer-h3">Services</h3>
+          <ul class="footer-links">
+            <li><a href="https://bluewhaledental.com/cosmetic-dentistry/"><i class="ti ti-chevron-right" aria-hidden="true"></i> Cosmetic Dentistry</a></li>
+            <li><a href="https://bluewhaledental.com/expert-restorative-dental/"><i class="ti ti-chevron-right" aria-hidden="true"></i> Restorative Care</a></li>
+            <li><a href="https://bluewhaledental.com/orthodontics-orthodontist-in-midtown-manhattan/"><i class="ti ti-chevron-right" aria-hidden="true"></i> Orthodontics</a></li>
+            <li><a href="https://bluewhaledental.com/general-dentistry/"><i class="ti ti-chevron-right" aria-hidden="true"></i> General Dentistry</a></li>
+            <li><a href="https://bluewhaledental.com/sedation-dentistry-in-midtown-manhattan/"><i class="ti ti-chevron-right" aria-hidden="true"></i> Sedation Dentistry</a></li>
+          </ul>
+        </div>
+
+        <!-- Reach Us -->
+        <div class="footer-col">
+          <h3 class="footer-h3">Reach Us</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <i class="ti ti-map-pin" aria-hidden="true"></i>
+              <span>
+                10 W. 46th Street #1402<br>
+                New York, NY 10036<br>
+                <small style="color: var(--accent-sky); font-weight: 500;">(Near Bryant Park & Grand Central)</small>
+              </span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="ti ti-envelope" aria-hidden="true"></i>
+              <a href="mailto:info@bluewhaledental.com" style="color: inherit;">info@bluewhaledental.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <i class="ti ti-phone" aria-hidden="true"></i>
+              <a href="tel:+12127521252" style="color: inherit;">+1-212-752-1252</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          Copyright © 2026 <a href="https://bluewhaledental.com/" style="color: var(--accent-sky); font-weight: 500;">Blue Whale Dental Implants- Midtown New York</a> | Website Developed by <a href="https://bugle.in/" target="_blank" rel="noopener" style="color: rgba(255, 255, 255, 0.65);">Bugle</a>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="https://bluewhaledental.com/privacy-policy-blue-whale-dental/">Privacy Policy</a>
+          <a href="https://bluewhaledental.com/cookie-policy/">Cookie Policy</a>
+          <a href="https://bluewhaledental.com/terms-and-conditions/">Terms & Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       JAVASCRIPT FOR INTERACTION
+       ========================================== -->
+  <script>
+    // Header Scroll Effect
+    const header = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // FAQ Accordion Interaction
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other items first
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.faq-answer').style.maxHeight = '0px';
+            otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        // Toggle current item
+        if (isActive) {
+          item.classList.remove('active');
+          answer.style.maxHeight = '0px';
+          question.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          question.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Mobile Menu Toggle interaction placeholder
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', () => {
+        alert('Mobile menu navigation expanded. In your production WordPress theme, this links to your mobile drawer component.');
+      });
+    }
+  </script>
+</body>
+</html>

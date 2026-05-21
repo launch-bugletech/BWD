@@ -1,0 +1,98 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+.h3w{font-family:'Outfit',sans-serif;border-radius:16px;overflow:hidden;background:#fff;border:1px solid #e8e4de;}
+.h3-top{display:grid;grid-template-columns:5fr 4fr;min-height:460px;}
+.h3-left{padding:44px 44px 36px;display:flex;flex-direction:column;justify-content:center;background:#fff;border-right:1px solid #e8e4de;}
+.h3-service-tag{display:inline-flex;align-items:center;gap:6px;background:#edf7f3;color:#0F6E56;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;margin-bottom:24px;width:fit-content;}
+.h3-h1{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:#111110;line-height:1.12;margin-bottom:8px;}
+.h3-h1 span{font-style:italic;font-weight:400;color:#1A8C6C;}
+.h3-location{font-size:12px;color:#1A8C6C;font-weight:500;letter-spacing:0.04em;margin-bottom:20px;display:flex;align-items:center;gap:5px;}
+.h3-location i{font-size:14px;}
+.h3-divider{width:40px;height:2px;background:#1A8C6C;margin:0 0 20px;}
+.h3-p{font-size:13.5px;line-height:1.72;color:#6b6b65;font-weight:300;max-width:360px;margin-bottom:28px;}
+.h3-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+.h3-btn-p{background:#111110;color:#fff;padding:12px 24px;border-radius:6px;font-size:13px;font-weight:500;font-family:'Outfit',sans-serif;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;}
+.h3-btn-s{background:#fff;color:#111110;padding:11px 20px;border-radius:6px;font-size:13px;font-weight:400;font-family:'Outfit',sans-serif;border:1px solid #ccc;display:inline-flex;align-items:center;gap:8px;text-decoration:none;cursor:pointer;}
+.h3-features{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.h3-feat{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#6b6b65;}
+.h3-feat i{font-size:15px;color:#1A8C6C;margin-top:1px;}
+.h3-right{position:relative;overflow:hidden;}
+.h3-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;}
+.h3-img-tag{position:absolute;top:20px;right:20px;background:#fff;border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:8px;}
+.h3-img-tag i{font-size:16px;color:#1A8C6C;}
+.h3-img-tag-text{font-size:11px;font-weight:500;color:#111110;}
+.h3-img-tag-sub{font-size:10px;color:#888882;}
+.h3-bottom{background:#111110;display:grid;grid-template-columns:repeat(4,1fr);}
+.h3-stat{padding:16px 20px;border-right:1px solid rgba(255,255,255,0.1);text-align:center;}
+.h3-stat:last-child{border-right:none;}
+.h3-sn{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#4ECDA4;display:block;margin-bottom:3px;}
+.h3-sl{font-size:10.5px;color:rgba(255,255,255,0.4);font-weight:300;}
+</style>
+
+<h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Blue Whale Dental Invisalign hero — asymmetric light design with photo panel</h2>
+
+<div class="h3w">
+  <div class="h3-top">
+    <div class="h3-left">
+      <div class="h3-service-tag">
+        <i class="ti ti-star" style="font-size:12px;" aria-hidden="true"></i>
+        Invisalign® Clear Aligners
+      </div>
+
+      <h1 class="h3-h1">Straighten Your<br>Smile <span>Discreetly</span><br>— No Metal Braces</h1>
+
+      <div class="h3-location">
+        <i class="ti ti-map-pin" aria-hidden="true"></i>
+        Blue Whale Dental · 10 W. 46th St, Midtown Manhattan
+      </div>
+
+      <div class="h3-divider" aria-hidden="true"></div>
+
+      <p class="h3-p">
+        Invisalign® clear aligners at Blue Whale Dental are designed for adults, teens, and busy NYC professionals. Removable, comfortable, and built around your lifestyle — with personalized digital treatment planning from our experienced Midtown team.
+      </p>
+
+      <div class="h3-btns">
+        <button class="h3-btn-p" onclick="sendPrompt('I want to book an Invisalign consultation at Blue Whale Dental in Midtown NYC')">
+          <i class="ti ti-calendar" aria-hidden="true"></i>
+          Book Free Consultation
+        </button>
+        <a href="tel:+12127521252" class="h3-btn-s">
+          <i class="ti ti-phone" aria-hidden="true"></i>
+          212-752-1252
+        </a>
+      </div>
+
+      <div class="h3-features">
+        <div class="h3-feat"><i class="ti ti-eye-off" aria-hidden="true"></i><span>Virtually invisible aligners</span></div>
+        <div class="h3-feat"><i class="ti ti-refresh" aria-hidden="true"></i><span>Removable — eat freely</span></div>
+        <div class="h3-feat"><i class="ti ti-device-desktop-analytics" aria-hidden="true"></i><span>Digital treatment planning</span></div>
+        <div class="h3-feat"><i class="ti ti-clock" aria-hidden="true"></i><span>Flexible NYC appointments</span></div>
+      </div>
+    </div>
+
+    <div class="h3-right">
+      <img class="h3-img"
+        src="https://bluewhaledental.com/wp-content/uploads/2025/06/Invisalign.png"
+        alt="Invisalign aligners at Blue Whale Dental Midtown Manhattan"
+        onerror="this.src='https://bluewhaledental.com/wp-content/uploads/2024/10/Invisalign-1.png'"
+      />
+      <div class="h3-img-tag" aria-label="Certified Invisalign provider">
+        <i class="ti ti-rosette" aria-hidden="true"></i>
+        <div>
+          <div class="h3-img-tag-text">Certified Provider</div>
+          <div class="h3-img-tag-sub">Invisalign® Preferred</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="h3-bottom" role="list" aria-label="Practice highlights">
+    <div class="h3-stat" role="listitem"><span class="h3-sn">500+</span><span class="h3-sl">Smiles transformed</span></div>
+    <div class="h3-stat" role="listitem"><span class="h3-sn">10+</span><span class="h3-sl">Years experience</span></div>
+    <div class="h3-stat" role="listitem"><span class="h3-sn">5★</span><span class="h3-sl">Top-rated in Midtown</span></div>
+    <div class="h3-stat" role="listitem"><span class="h3-sn">Near GCT</span><span class="h3-sl">Grand Central Station</span></div>
+  </div>
+</div>
