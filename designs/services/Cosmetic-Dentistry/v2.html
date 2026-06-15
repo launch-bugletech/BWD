@@ -1438,6 +1438,396 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ==========================================
+       MEET YOUR ORTHODONTIC TEAM
+       ========================================== */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 40px;
+        }
+
+        .team-card {
+            background: var(--white);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            overflow: hidden;
+            text-align: center;
+            transition: var(--transition-smooth);
+            box-shadow: 0 8px 24px 0 rgba(19, 84, 140, 0.02);
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px 0 rgba(19, 84, 140, 0.05);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 24px;
+        }
+
+        .team-name {
+            font-family: var(--font-headings);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+        }
+
+        .team-role {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-sky);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        .team-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+
+        .team-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--accent-sky);
+            padding-bottom: 3px;
+            transition: var(--transition-smooth);
+        }
+
+        .team-link:hover {
+            color: var(--accent-sky);
+            gap: 10px;
+        }
+
+        /* ==========================================
+       TECHNOLOGY WE USE
+       ========================================== */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .tech-card {
+            background: var(--white);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(25, 150, 240, 0.2);
+            box-shadow: 0 16px 36px 0 rgba(19, 84, 140, 0.05);
+        }
+
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: hsla(208, 76%, 31%, 0.05);
+            color: var(--primary-blue-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.9rem;
+            margin: 0 auto 18px;
+        }
+
+        .tech-title {
+            font-family: var(--font-headings);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .tech-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* ==========================================
+       BEFORE & AFTER GALLERY
+       ========================================== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px 0 rgba(19, 84, 140, 0.04);
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px 0 rgba(19, 84, 140, 0.08);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .gallery-tag {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            backdrop-filter: blur(6px);
+        }
+
+        /* ==========================================
+       TESTIMONIALS / PATIENT REVIEWS
+       ========================================== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.01);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 36px 0 rgba(19, 84, 140, 0.04);
+            border-color: rgba(25, 150, 240, 0.2);
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            font-size: 2.2rem;
+            color: hsla(208, 76%, 31%, 0.05);
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 20px;
+            color: #ffb800;
+            font-size: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: var(--text-charcoal);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .testimonial-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid var(--glass-border);
+            padding-top: 20px;
+        }
+
+        .meta-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: hsla(208, 76%, 31%, 0.08);
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .meta-details h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-charcoal);
+        }
+
+        .meta-details span {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* ==========================================
+       INSURANCE & FINANCING BAND
+       ========================================== */
+        .insurance-band {
+            background: linear-gradient(135deg, #e8f2fe, #f5f9fe);
+            border-radius: 20px;
+            padding: 48px;
+            margin-top: 0;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 48px;
+            align-items: center;
+            border: 1px solid rgba(1, 78, 178, 0.06);
+        }
+
+        .insurance-text h2 {
+            font-family: var(--font-headings);
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 14px;
+            line-height: 1.25;
+        }
+
+        .insurance-text p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+
+        .insurance-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .insurance-list li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--white);
+            border-radius: 10px;
+            padding: 14px 18px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-charcoal);
+            box-shadow: 0 4px 12px 0 rgba(19, 84, 140, 0.03);
+        }
+
+        .insurance-list li i {
+            color: var(--accent-sky);
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        /* ==========================================
+       VIDEO / VIRTUAL TOUR EMBED
+       ========================================== */
+        .video-wrap {
+            margin-top: 60px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px 0 rgba(19, 84, 140, 0.08);
+            position: relative;
+        }
+
+        .video-wrap iframe,
+        .video-wrap video {
+            width: 100%;
+            height: 480px;
+            display: block;
+            border: none;
+        }
+
+        /* ==========================================
+       RESPONSIVE FOR NEW SECTIONS
+       ========================================== */
+        @media (max-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .insurance-band {
+                grid-template-columns: 1fr;
+                gap: 28px;
+                padding: 36px;
+            }
+
+            .video-wrap iframe,
+            .video-wrap video {
+                height: 320px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -1564,7 +1954,23 @@
             </div>
         </div>
     </section>
+<section class="section section-zebra" id="virtual-tour">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-eyebrow">Take a Look Inside</span>
+            <h2 class="section-title">Take a Virtual Tour of Our Midtown Office</h2>
+            <p class="section-subtitle">
+                Get a feel for our modern, calming office before your first visit — located just steps from
+                Bryant Park and Grand Central.
+            </p>
+        </div>
 
+        <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID"
+                title="Blue Whale Dental Midtown Office Tour" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
     <!-- ==========================================
        SECONDARY HERO BAND — "Diamond District's Premium Dentistry"
        (Mirrors Cosmetic Dentistry page structure)
@@ -1664,6 +2070,71 @@
                     <img class="intro-img"
                         src="https://bluewhaledental.com/wp-content/uploads/2024/10/Orthodontics-1024x1024.png"
                         alt="Orthodontics care at Blue Whale Dental Midtown Manhattan" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Your Care Team</span>
+                <h2 class="section-title">Meet Your Orthodontic Team</h2>
+                <p class="section-subtitle">
+                    Our experienced doctors combine clinical expertise with a gentle, patient-first approach —
+                    so every visit feels personal, not clinical.
+                </p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <img class="team-photo"
+                        src="https://bluewhaledental.com/wp-content/uploads/2024/12/Add-a-heading.jpg"
+                        alt="Dr. Carmen Cuello - Blue Whale Dental Midtown Manhattan" />
+                    <div class="team-info">
+                        <h3 class="team-name">Dr. Carmen Cuello</h3>
+                        <div class="team-role">General &amp; Orthodontic Care</div>
+                        <p class="team-desc">
+                            Brings years of experience in personalized orthodontic treatment planning, combining
+                            modern techniques with attentive, patient-focused care.
+                        </p>
+                        <a href="https://bluewhaledental.com/specialist-dr-carmen-cuello/" class="team-link">
+                            View Full Profile <i class="ti ti-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img class="team-photo"
+                        src="https://bluewhaledental.com/wp-content/uploads/2025/04/Dr.-Valery-Itkina​-Edited-1024x1024.png"
+                        alt="Dr. Valeriya Itkina - Blue Whale Dental Midtown Manhattan" />
+                    <div class="team-info">
+                        <h3 class="team-name">Dr. Valeriya Itkina</h3>
+                        <div class="team-role">General &amp; Orthodontic Care</div>
+                        <p class="team-desc">
+                            Focused on creating comfortable, judgment-free experiences for patients of all ages,
+                            with a strong emphasis on digital treatment planning.
+                        </p>
+                        <a href="https://bluewhaledental.com/dr-valeriya-itkina/" class="team-link">
+                            View Full Profile <i class="ti ti-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img class="team-photo"
+                        src="https://bluewhaledental.com/wp-content/uploads/2024/10/Cosmetic-Dentistry-1024x1024.png"
+                        alt="Blue Whale Dental orthodontic care team Midtown Manhattan" />
+                    <div class="team-info">
+                        <h3 class="team-name">Our Full Care Team</h3>
+                        <div class="team-role">Hygienists &amp; Support Staff</div>
+                        <p class="team-desc">
+                            A dedicated team of hygienists and care coordinators support every step of your
+                            orthodontic journey, from scheduling to aftercare.
+                        </p>
+                        <a href="https://bluewhaledental.com/about-us/" class="team-link">
+                            About Our Practice <i class="ti ti-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1901,6 +2372,54 @@
 
     </section>
 
+    <section class="section section-zebra" id="technology">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Advanced Digital Dentistry</span>
+                <h2 class="section-title">Technology We Use for Orthodontic Care</h2>
+                <p class="section-subtitle">
+                    From digital scanning to 3D treatment simulation, our Midtown office is equipped with modern
+                    technology designed for precision, comfort, and predictable results.
+                </p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="ti ti-scan" aria-hidden="true"></i></div>
+                    <h3 class="tech-title">Digital 3D Scanning</h3>
+                    <p class="tech-desc">
+                        High-definition intraoral scanners replace messy putty impressions with fast, comfortable
+                        digital models of your teeth.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="ti ti-device-desktop-analytics" aria-hidden="true"></i></div>
+                    <h3 class="tech-title">3D Treatment Simulation</h3>
+                    <p class="tech-desc">
+                        Preview how your smile will shift over time with computer-guided treatment mapping before
+                        treatment even begins.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="ti ti-x-ray" aria-hidden="true"></i></div>
+                    <h3 class="tech-title">Digital X-Rays</h3>
+                    <p class="tech-desc">
+                        Low-radiation digital imaging gives our team a clear view of tooth roots, jaw structure,
+                        and bite alignment.
+                    </p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="ti ti-adjustments" aria-hidden="true"></i></div>
+                    <h3 class="tech-title">Precision Treatment Planning</h3>
+                    <p class="tech-desc">
+                        Every aligner stage or bracket placement is mapped digitally for more predictable, efficient
+                        movement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ==========================================
        WHY CHOOSE BLUE WHALE FOR ORTHODONTICS
        (5 Pillars, mirrors Cosmetic Dentistry page)
@@ -1969,6 +2488,147 @@
         </div>
     </section>
 
+    <!-- Before & After Gallery -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Real Results</span>
+                <h2 class="section-title">Smile Transformations from Our Midtown Patients</h2>
+                <p class="section-subtitle">
+                    A glimpse at the kind of results our orthodontic treatments can achieve — every smile is
+                    planned and tracked with the same level of care.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Invisalign-1-1024x1024.png"
+                        alt="Invisalign smile transformation Midtown Manhattan" />
+                    <span class="gallery-tag">Invisalign®</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Aligners-1024x1024.png"
+                        alt="Traditional braces smile transformation Midtown Manhattan" />
+                    <span class="gallery-tag">Braces</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Comfortable-Fit.jpg"
+                        alt="Pediatric orthodontics smile transformation Midtown Manhattan" />
+                    <span class="gallery-tag">Pediatric Care</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Discreet-Appearance.jpg"
+                        alt="Retainer smile maintenance Midtown Manhattan" />
+                    <span class="gallery-tag">Retainers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Patient Testimonials -->
+    <section class="section section-zebra" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Patient Stories</span>
+                <h2 class="section-title">What Our Patients Say</h2>
+                <p class="section-subtitle">
+                    Rated 4.9/5 stars across 250+ reviews from patients across Invisalign, braces, retainers, and
+                    pediatric orthodontic care.
+                </p>
+            </div>
+    
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="ti ti-quote" aria-hidden="true"></i></div>
+                    <div class="rating-stars">
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        The Invisalign process was so easy to fit into my work schedule. The digital scans meant
+                        no messy impressions, and I could see my treatment plan before we even started.
+                    </p>
+                    <div class="testimonial-meta">
+                        <div class="meta-avatar">JM</div>
+                        <div class="meta-details">
+                            <h4>Jordan M.</h4>
+                            <span>Invisalign® Patient</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="ti ti-quote" aria-hidden="true"></i></div>
+                    <div class="rating-stars">
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        My son needed an early evaluation and the team made him feel completely comfortable. They
+                        explained everything clearly and didn't rush into unnecessary treatment.
+                    </p>
+                    <div class="testimonial-meta">
+                        <div class="meta-avatar">RT</div>
+                        <div class="meta-details">
+                            <h4>Rachel T.</h4>
+                            <span>Pediatric Orthodontics Parent</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="ti ti-quote" aria-hidden="true"></i></div>
+                    <div class="rating-stars">
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                        <i class="ti ti-star-filled" aria-hidden="true"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        After two years with braces, my retainers fit perfectly on the first try. The whole team
+                        made the transition feel seamless and stress-free.
+                    </p>
+                    <div class="testimonial-meta">
+                        <div class="meta-avatar">DK</div>
+                        <div class="meta-details">
+                            <h4>David K.</h4>
+                            <span>Braces &amp; Retainer Patient</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Insurance & Financing Band -->
+    <section class="section" id="insurance">
+        <div class="container">
+            <div class="insurance-band">
+                <div class="insurance-text">
+                    <span class="section-eyebrow">Cost &amp; Coverage</span>
+                    <h2>Affordable Orthodontic Care, Made Simple</h2>
+                    <p>
+                        We believe a straighter smile shouldn't be out of reach. We work with most major dental
+                        insurance providers and offer flexible financing options so you can begin treatment with
+                        confidence. Our team will walk you through your coverage and out-of-pocket costs during
+                        your consultation — no surprises.
+                    </p>
+                </div>
+                <ul class="insurance-list">
+                    <li><i class="ti ti-shield-check" aria-hidden="true"></i> Most major dental insurance plans accepted
+                    </li>
+                    <li><i class="ti ti-credit-card" aria-hidden="true"></i> CareCredit &amp; flexible payment plans</li>
+                    <li><i class="ti ti-receipt" aria-hidden="true"></i> Transparent cost breakdown before treatment</li>
+                    <li><i class="ti ti-calendar-dollar" aria-hidden="true"></i> Monthly payment options available</li>
+                </ul>
+            </div>
+        </div>
+    </section>  
     <!-- ==========================================
        FAQ SECTION
        ========================================== -->
