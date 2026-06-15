@@ -282,10 +282,10 @@
             position: absolute;
             right: 0;
             top: 0;
-            width: 58%;
+            width: 60%;
             height: 100%;
             object-fit: cover;
-            object-position: left center;
+            object-position: center center;
             z-index: 1;
         }
 
@@ -294,9 +294,10 @@
             inset: 0;
             background: linear-gradient(to right,
                     #ddeaf8 0%,
-                    #ddeaf8 35%,
-                    rgba(221, 234, 248, 0.75) 50%,
-                    rgba(26, 106, 191, 0.0) 68%);
+                    #ddeaf8 32%,
+                    rgba(221, 234, 248, 0.82) 48%,
+                    rgba(221, 234, 248, 0.25) 62%,
+                    rgba(26, 106, 191, 0) 78%);
             z-index: 2;
             pointer-events: none;
         }
@@ -667,6 +668,94 @@
             margin-bottom: 0;
         }
 
+        .enhanced-finder-wrap {
+            margin-top: 90px;
+            padding: 56px;
+            border-radius: 28px;
+            background: linear-gradient(135deg, rgba(1, 78, 178, 0.04), rgba(25, 150, 240, 0.08));
+            border: 1px solid rgba(19, 84, 140, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enhanced-finder-wrap::before {
+            content: "";
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: rgba(25, 150, 240, 0.09);
+            pointer-events: none;
+        }
+
+        .enhanced-finder-grid {
+            position: relative;
+            z-index: 2;
+        }
+
+        .enhanced-finder-card {
+            text-decoration: none;
+            color: inherit;
+            min-height: 100%;
+            text-align: left;
+            padding: 30px 26px;
+        }
+
+        .finder-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 16px;
+            background: rgba(1, 78, 178, 0.07);
+            color: var(--primary-blue-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.65rem;
+            margin-bottom: 22px;
+        }
+
+        .enhanced-finder-card:hover .finder-icon {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .enhanced-finder-card .finder-age {
+            font-size: 1.45rem;
+            margin-bottom: 4px;
+        }
+
+        .enhanced-finder-card .finder-desc {
+            margin-bottom: 18px;
+        }
+
+        .finder-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-top: auto;
+        }
+
+        .enhanced-finder-card:hover .finder-link {
+            gap: 12px;
+            color: var(--primary-blue-light);
+        }
+
+        @media (max-width: 768px) {
+            .enhanced-finder-wrap {
+                padding: 32px 22px;
+                border-radius: 22px;
+            }
+
+            .enhanced-finder-card {
+                padding: 26px 22px;
+            }
+        }
+
         /* ==========================================
        SERVICE OVERVIEW BLOCKS (Invisalign / Braces / Retainers / Pediatric)
        ========================================== */
@@ -772,6 +861,473 @@
             gap: 14px;
         }
 
+        /* ==========================================
+       SERVICE BLOCK — EXPANDED EMOTIONAL/INTENT CONTENT
+       ========================================== */
+        .service-text-extra {
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .service-intent-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-blue-light);
+            margin-bottom: 14px;
+        }
+
+        .service-intent-label i {
+            font-size: 1.1rem;
+        }
+
+        .service-intent-text {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+
+        .service-intent-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-intent-text strong {
+            color: var(--text-charcoal);
+            font-weight: 600;
+        }
+
+        .service-mini-faq {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 8px;
+        }
+
+        .service-mini-faq-item {
+            background: var(--bg-linen);
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+
+        .service-mini-faq-q {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 6px;
+        }
+
+        .service-mini-faq-q i {
+            color: var(--accent-sky);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .service-mini-faq-a {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-weight: 300;
+            padding-left: 24px;
+        }
+
+        .service-feature-card {
+            background: var(--white);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 18px 45px rgba(19, 84, 140, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-feature-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(25, 150, 240, 0.08), transparent 42%);
+            pointer-events: none;
+        }
+
+        .enhanced-service-visual {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            min-height: 420px;
+        }
+
+        .enhanced-service-visual img {
+            height: 100%;
+            min-height: 420px;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .service-feature-card:hover .enhanced-service-visual img {
+            transform: scale(1.05);
+        }
+
+        .service-floating-badge {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            background: rgba(255, 255, 255, 0.92);
+            color: var(--primary-blue);
+            border: 1px solid rgba(19, 84, 140, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 22px rgba(19, 84, 140, 0.08);
+        }
+
+        .enhanced-service-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 26px 0;
+        }
+
+        .service-benefit-card {
+            background: var(--bg-alabaster);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            padding: 16px 12px;
+            text-align: center;
+        }
+
+        .service-benefit-card i {
+            display: block;
+            font-size: 1.45rem;
+            color: var(--primary-blue-light);
+            margin-bottom: 8px;
+        }
+
+        .service-benefit-card span {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-charcoal);
+            line-height: 1.35;
+        }
+
+        .enhanced-service-points {
+            margin-bottom: 30px;
+        }
+
+        .service-link-button {
+            border-bottom: none;
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 13px 22px;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(19, 84, 140, 0.16);
+        }
+
+        .service-link-button:hover {
+            color: var(--white);
+            background: var(--primary-blue-light);
+            gap: 12px;
+        }
+
+        .compact-intent-box {
+            background: linear-gradient(135deg, rgba(1, 78, 178, 0.04), rgba(25, 150, 240, 0.06));
+            border: 1px solid rgba(19, 84, 140, 0.08);
+            border-radius: 16px;
+            padding: 22px;
+            margin: 24px 0 26px;
+        }
+
+        .compact-intent-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .patient-insights {
+            margin: 32px 0;
+            padding: 28px;
+            border-radius: 20px;
+            background: linear-gradient(135deg,
+                    rgba(1, 78, 178, 0.03),
+                    rgba(25, 150, 240, 0.06));
+            border: 1px solid rgba(1, 78, 178, 0.08);
+        }
+
+        .patient-insights-header {
+            margin-bottom: 22px;
+        }
+
+        .patient-insights-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            color: var(--primary-blue-light);
+            margin-bottom: 8px;
+        }
+
+        .patient-insights-header h4 {
+            font-size: 1.15rem;
+            color: var(--text-charcoal);
+            margin: 0;
+        }
+
+        .patient-question-card {
+            display: flex;
+            gap: 16px;
+            padding: 18px;
+            background: white;
+            border-radius: 14px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(19, 84, 140, .06);
+        }
+
+        .patient-question-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .question-icon {
+            flex-shrink: 0;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: rgba(1, 78, 178, .08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+        }
+
+        .question-content strong {
+            display: block;
+            font-size: .95rem;
+            margin-bottom: 6px;
+            color: var(--text-charcoal);
+        }
+
+        .question-content p {
+            margin: 0;
+            font-size: .88rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        .service-highlights {
+            margin-top: 28px;
+        }
+
+        .service-highlights-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 18px;
+        }
+
+        .service-highlights-title i {
+            color: var(--accent-sky);
+        }
+
+        .compact-intent-item strong {
+            display: block;
+            font-size: 0.92rem;
+            color: var(--text-charcoal);
+            margin-bottom: 6px;
+        }
+
+        .compact-intent-item p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .service-feature-card {
+                padding: 20px;
+            }
+
+            .service-benefit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .enhanced-service-visual,
+            .enhanced-service-visual img {
+                min-height: 320px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .service-feature-card {
+                align-items: start;
+            }
+
+            .enhanced-service-visual {
+                position: sticky;
+                top: 120px;
+                align-self: start;
+            }
+        }
+
+        .mini-faq-item {
+            background: var(--white);
+            border: 1px solid rgba(19, 84, 140, 0.07);
+            border-radius: 16px;
+            margin-bottom: 14px;
+            overflow: hidden;
+        }
+
+        .mini-faq-question {
+            width: 100%;
+            border: 0;
+            background: transparent;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--text-charcoal);
+            text-align: left;
+        }
+
+        .mini-faq-question i {
+            color: var(--primary-blue-light);
+            transition: transform 0.3s ease;
+        }
+
+        .mini-faq-item.active .mini-faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .mini-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+
+        .mini-faq-answer p {
+            margin: 0;
+            padding: 0 20px 20px;
+            font-size: 0.88rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+.enhanced-insurance-band {
+    background:
+        radial-gradient(circle at top left, rgba(25, 150, 240, 0.12), transparent 35%),
+        linear-gradient(135deg, #e8f2fe, #f8fbff);
+    border-radius: 28px;
+    padding: 56px;
+    grid-template-columns: 0.95fr 1.25fr;
+    box-shadow: 0 18px 45px rgba(19, 84, 140, 0.06);
+}
+
+.insurance-text h2 {
+    font-size: 2.1rem;
+}
+
+.insurance-cta {
+    margin-top: 26px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 8px 20px rgba(19, 84, 140, 0.16);
+}
+
+.insurance-cta:hover {
+    background: var(--primary-blue-light);
+    color: var(--white);
+    gap: 14px;
+}
+
+.insurance-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.insurance-mini-card {
+    background: var(--white);
+    border: 1px solid rgba(19, 84, 140, 0.08);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 22px rgba(19, 84, 140, 0.04);
+}
+
+.insurance-mini-card i {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: rgba(1, 78, 178, 0.07);
+    color: var(--primary-blue-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    margin-bottom: 16px;
+}
+
+.insurance-mini-card h3 {
+    font-family: var(--font-headings);
+    font-size: 1.05rem;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+.insurance-mini-card p {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .enhanced-insurance-band {
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .insurance-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .enhanced-insurance-band {
+        padding: 32px 22px;
+        border-radius: 22px;
+    }
+}
         /* ==========================================
        WHY CHOOSE US SECTION (5 pillars)
        ========================================== */
@@ -1881,7 +2437,8 @@
        ========================================== -->
     <section class="hero-section" id="hero">
 
-        <img class="hero-bg-image" src="https://bluewhaledental.com/wp-content/uploads/2024/10/Orthodontics.png"
+        <img class="hero-bg-image"
+            src="https://bluewhaledental.com/wp-content/uploads/2026/06/orthodontics-midtown-manhattan-nyc-clear-aligners-braces-hero.webp"
             alt="Orthodontics patient at Blue Whale Dental Midtown Manhattan" />
 
         <div class="hero-bg-overlay"></div>
@@ -1954,23 +2511,23 @@
             </div>
         </div>
     </section>
-<section class="section section-zebra" id="virtual-tour">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-eyebrow">Take a Look Inside</span>
-            <h2 class="section-title">Take a Virtual Tour of Our Midtown Office</h2>
-            <p class="section-subtitle">
-                Get a feel for our modern, calming office before your first visit — located just steps from
-                Bryant Park and Grand Central.
-            </p>
-        </div>
+    <section class="section section-zebra" id="virtual-tour">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Take a Look Inside</span>
+                <h2 class="section-title">Take a Virtual Tour of Our Midtown Office</h2>
+                <p class="section-subtitle">
+                    Get a feel for our modern, calming office before your first visit — located just steps from
+                    Bryant Park and Grand Central.
+                </p>
+            </div>
 
-        <div class="video-wrap">
-            <iframe src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID"
-                title="Blue Whale Dental Midtown Office Tour" allowfullscreen loading="lazy"></iframe>
+            <div class="video-wrap">
+                <iframe src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID"
+                    title="Blue Whale Dental Midtown Office Tour" allowfullscreen loading="lazy"></iframe>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
     <!-- ==========================================
        SECONDARY HERO BAND — "Diamond District's Premium Dentistry"
        (Mirrors Cosmetic Dentistry page structure)
@@ -2062,7 +2619,7 @@
                     <p>
                         We pride ourselves on combining advanced digital diagnostics with a relaxing,
                         professional environment, ensuring your orthodontic journey is comfortable, transparent,
-                        and tailored to you — whether you're a busy NYC professional, a teen, or a parent
+                        and tailored to you whether you're a busy NYC professional, a teen, or a parent
                         planning ahead for your child's smile.
                     </p>
                 </div>
@@ -2156,117 +2713,524 @@
                 </p>
             </div>
 
-            <!-- Block 1: Invisalign -->
-            <div class="service-block">
-                <div class="service-visual">
+            <!-- Block 1: Invisalign - Improved Service Overview -->
+            <div class="service-block service-feature-card">
+                <div class="service-visual enhanced-service-visual">
                     <img src="https://bluewhaledental.com/wp-content/uploads/2025/06/Invisalign.png"
                         alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC" />
+
+                    <div class="service-floating-badge">
+                        <i class="ti ti-sparkles" aria-hidden="true"></i>
+                        Popular for Adults
+                    </div>
                 </div>
-                <div class="service-text">
+
+                <div class="service-text enhanced-service-text">
                     <span class="service-eyebrow">Discreet &amp; Removable</span>
+
                     <h3 class="service-title">Invisalign® Clear Aligners</h3>
+
                     <p class="service-desc">
-                        Straighten your smile without metal braces. Invisalign® clear aligners are virtually
-                        invisible, fully removable, and designed for busy professionals, teens, and adults who
-                        want effective results with minimal disruption to daily life.
+                        Straighten your smile with clear, removable aligners designed for comfort,
+                        convenience, and a more discreet orthodontic experience. Invisalign® is ideal
+                        for busy Midtown professionals, teens, and adults who want effective treatment
+                        without the look of metal braces.
                     </p>
-                    <ul class="service-points">
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Nearly invisible, custom-fit trays
-                        </li>
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Removable for eating, brushing, and
-                            flossing</li>
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Advanced digital treatment planning
-                        </li>
-                    </ul>
-                    <a href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/" class="service-link">
-                        Learn More About Invisalign® <i class="ti ti-arrow-right" aria-hidden="true"></i>
+
+                    <div class="service-benefit-grid">
+                        <div class="service-benefit-card">
+                            <i class="ti ti-eye-off" aria-hidden="true"></i>
+                            <span>Nearly Invisible</span>
+                        </div>
+
+                        <div class="service-benefit-card">
+                            <i class="ti ti-tools-kitchen-2" aria-hidden="true"></i>
+                            <span>Removable for Meals</span>
+                        </div>
+
+                        <div class="service-benefit-card">
+                            <i class="ti ti-scan" aria-hidden="true"></i>
+                            <span>Digitally Planned</span>
+                        </div>
+                    </div>
+                    <div class="service-highlights">
+
+                        <div class="service-highlights-title">
+                            <i class="ti ti-sparkles"></i>
+                            Why Patients Choose Invisalign®
+                        </div>
+
+                        <ul class="service-points enhanced-service-points">
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Custom-crafted aligners designed around your unique smile goals
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Flexible treatment that fits work, school, travel, and social events
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Predictable treatment planning with advanced digital technology
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Easier brushing and flossing compared with traditional braces
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Comfortable, smooth trays with no brackets or wires
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <a href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
+                        class="service-link service-link-button">
+                        Learn More About Invisalign®
+                        <i class="ti ti-arrow-right" aria-hidden="true"></i>
                     </a>
+                    <div class="patient-insights">
+
+                        <div class="patient-insights-header">
+                            <span class="patient-insights-label">
+                                <i class="ti ti-message-circle"></i>
+                                What Patients Often Ask
+                            </span>
+                            <h4>Common Questions About Invisalign®</h4>
+                        </div>
+
+                        <div class="mini-faq-item active">
+                            <button class="mini-faq-question" type="button" aria-expanded="true">
+                                <span>Will people know I'm wearing Invisalign®?</span>
+                                <i class="ti ti-chevron-down"></i>
+                            </button>
+                            <div class="mini-faq-answer">
+                                <p>
+                                    Most patients find that friends, coworkers, and clients rarely notice their
+                                    aligners.
+                                    The clear trays are designed to be discreet, making Invisalign® a popular choice for
+                                    professionals and adults who prefer a less noticeable orthodontic treatment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mini-faq-item">
+                            <button class="mini-faq-question" type="button" aria-expanded="false">
+                                <span>Is Invisalign® worth it for adults?</span>
+                                <i class="ti ti-chevron-down"></i>
+                            </button>
+                            <div class="mini-faq-answer">
+                                <p>
+                                    For many adults, Invisalign® offers the ideal balance of convenience, comfort, and
+                                    aesthetics.
+                                    It can address crowding, spacing, and mild bite concerns without the appearance of
+                                    traditional braces.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Block 2: Traditional Braces -->
-            <div class="service-block reverse">
-                <div class="service-visual">
-                    <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Aligners-1024x1024.png"
-                        alt="Traditional Braces at Blue Whale Dental Midtown Manhattan" />
+            <!-- Block 2: Traditional Braces Service Overview -->
+            <div class="service-block service-feature-card">
+                <div class="service-visual enhanced-service-visual">
+                    <img src="https://bluewhaledental.com/wp-content/uploads/2025/06/Invisalign.png"
+                        alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC" />
+
+                    <div class="service-floating-badge">
+                        <i class="ti ti-sparkles" aria-hidden="true"></i>
+                        Ideal for Complex Cases
+                    </div>
                 </div>
-                <div class="service-text">
-                    <span class="service-eyebrow">Proven &amp; Reliable</span>
+
+                <div class="service-text enhanced-service-text">
+                    <span class="service-eyebrow">Proven &amp;Reliable</span>
+
                     <h3 class="service-title">Traditional Braces</h3>
+
                     <p class="service-desc">
-                        For more complex alignment issues, traditional braces remain one of the most effective
-                        and reliable orthodontic solutions. Our team uses modern bracket systems designed for
-                        comfort, efficiency, and lasting results.
+                        Traditional braces remain one of the most trusted and effective orthodontic treatments for
+                        correcting moderate to
+                        complex alignment concerns. Using modern bracket systems and personalized treatment planning,
+                        braces can address
+                        crowding, spacing, bite issues, and tooth movement with predictable, long-lasting results for
+                        both teens and adults.
                     </p>
-                    <ul class="service-points">
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Effective for complex bite and
-                            alignment cases</li>
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Modern, lower-profile bracket systems
-                        </li>
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Suitable for teens and adults alike
-                        </li>
-                    </ul>
-                    <a href="https://bluewhaledental.com/traditional-braces-in-midtown-manhattan/" class="service-link">
-                        Learn More About Braces <i class="ti ti-arrow-right" aria-hidden="true"></i>
+
+                    <div class="service-benefit-grid">
+                        <div class="service-benefit-card">
+                            <i class="ti ti-eye-off" aria-hidden="true"></i>
+                            <span>Complex Cases</span>
+                        </div>
+
+                        <div class="service-benefit-card">
+                            <i class="ti ti-tools-kitchen-2" aria-hidden="true"></i>
+                            <span>Removable for Meals</span>
+                        </div>
+
+                        <div class="service-benefit-card">
+                            <i class="ti ti-scan" aria-hidden="true"></i>
+                            <span>All Ages</span>
+                        </div>
+                    </div>
+                    <div class="service-highlights">
+
+                        <div class="service-highlights-title">
+                            <i class="ti ti-sparkles"></i>
+                            Why Patients Choose Traditional Braces
+                        </div>
+
+                        <ul class="service-points enhanced-service-points">
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Corrects complex crowding, spacing, and bite issues
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Reliable and highly effective for advanced tooth movement
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Modern low-profile brackets designed for improved comfort
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Suitable for both teens and adults seeking lasting results
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Provides continuous treatment without needing patient compliance
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <a href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
+                        class="service-link service-link-button">
+                        Learn More About Traditional Braces
+                        <i class="ti ti-arrow-right" aria-hidden="true"></i>
                     </a>
+                    <div class="patient-insights">
+
+                        <div class="patient-insights-header">
+                            <span class="patient-insights-label">
+                                <i class="ti ti-message-circle"></i>
+                                What Patients Often Ask
+                            </span>
+                            <h4>Common Questions About Traditional Braces</h4>
+                        </div>
+
+                        <div class="mini-faq-item active">
+                            <button class="mini-faq-question" type="button" aria-expanded="true">
+                                <span>Do I need braces instead of Invisalign®?</span>
+                                <i class="ti ti-chevron-down"></i>
+                            </button>
+                            <div class="mini-faq-answer">
+                                <p>
+                                    Invisalign® works well for many mild to moderate cases, but traditional braces may
+                                    be better
+                                    for more complex crowding, spacing, bite alignment, or advanced tooth movement.
+                                    During your
+                                    consultation, our team will help you compare both options and choose the right
+                                    treatment for your smile.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mini-faq-item">
+                            <button class="mini-faq-question" type="button" aria-expanded="false">
+                                <span>Are braces only for teenagers?</span>
+                                <i class="ti ti-chevron-down"></i>
+                            </button>
+                            <div class="mini-faq-answer">
+                                <p>
+                                    No. Many adults choose traditional braces because they are reliable, effective, and
+                                    suitable
+                                    for complex orthodontic needs. Modern brackets are smaller and more comfortable than
+                                    older
+                                    designs, making braces a practical option for both teens and adults.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
 
             <!-- Block 3: Retainers -->
-            <div class="service-block">
-                <div class="service-visual">
-                    <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Discreet-Appearance.jpg"
-                        alt="Custom Retainers at Blue Whale Dental Midtown Manhattan" />
+            <div class="service-block service-feature-card">
+                <div class="service-visual enhanced-service-visual">
+                    <img src="https://bluewhaledental.com/wp-content/uploads/2025/06/Invisalign.png"
+                        alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC" />
+
+                    <div class="service-floating-badge">
+                        <i class="ti ti-sparkles" aria-hidden="true"></i>
+                        Protects Your Results
+                    </div>
                 </div>
-                <div class="service-text">
-                    <span class="service-eyebrow">Protect Your Results</span>
+
+                <div class="service-text enhanced-service-text">
+                    <span class="service-eyebrow">Proven &amp;Reliable</span>
+
                     <h3 class="service-title">Retainers</h3>
+
                     <p class="service-desc">
-                        Once your treatment is complete, custom retainers help keep your teeth in their new,
-                        beautifully aligned positions. We offer comfortable, durable retainers designed to fit
-                        seamlessly into your daily routine.
+                        Completing orthodontic treatment is only the beginning of maintaining your new smile. Custom
+                        retainers help keep your
+                        teeth in their corrected positions, reducing the risk of shifting over time. Whether you've
+                        completed Invisalign® or
+                        traditional braces treatment, our comfortable, custom-fit retainers are designed to protect your
+                        results for years to
+                        come.
                     </p>
-                    <ul class="service-points">
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Custom-fitted for lasting comfort</li>
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Protects your investment in a
-                            straighter smile</li>
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Available for both Invisalign and
-                            braces patients</li>
-                    </ul>
-                    <a href="https://bluewhaledental.com/retainers-at-blue-whale-dental/" class="service-link">
-                        Learn More About Retainers <i class="ti ti-arrow-right" aria-hidden="true"></i>
+
+                    <div class="service-benefit-grid">
+                        <div class="service-benefit-card">
+                            <i class="ti ti-eye-off" aria-hidden="true"></i>
+                            <span>Custom Fit</span>
+                        </div>
+
+                        <div class="service-benefit-card">
+                            <i class="ti ti-tools-kitchen-2" aria-hidden="true"></i>
+                            <span>Prevents Shifting</span>
+                        </div>
+
+                        <div class="service-benefit-card">
+                            <i class="ti ti-scan" aria-hidden="true"></i>
+                            <span>Long-Term Protection</span>
+                        </div>
+                    </div>
+                    <div class="service-highlights">
+
+                        <div class="service-highlights-title">
+                            <i class="ti ti-sparkles"></i>
+                            Why Patients Choose Custom Retainers
+                        </div>
+
+                        <ul class="service-points enhanced-service-points">
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Custom-crafted for a secure and comfortable fit
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Helps prevent unwanted tooth movement after treatment
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Suitable for patients who completed Invisalign® or braces
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Durable materials designed for everyday wear
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Protects your investment in a straighter, healthier smile
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <a href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
+                        class="service-link service-link-button">
+                        Learn More About Retainers
+                        <i class="ti ti-arrow-right" aria-hidden="true"></i>
                     </a>
+
+                    <div class="patient-insights">
+
+                        <div class="patient-insights-header">
+                            <span class="patient-insights-label">
+                                <i class="ti ti-message-circle"></i>
+                                What Patients Often Ask
+                            </span>
+                            <h4>Common Questions About Retainers</h4>
+                        </div>
+
+                        <div class="mini-faq-item active">
+                            <button class="mini-faq-question" type="button" aria-expanded="true">
+                                <span>Do I really need to wear a retainer after treatment?</span>
+                                <i class="ti ti-chevron-down"></i>
+                            </button>
+                            <div class="mini-faq-answer">
+                                <p>
+                                    Yes. Teeth naturally tend to shift over time, even after successful orthodontic
+                                    treatment.
+                                    Wearing your retainer as directed helps preserve your new alignment and protects the
+                                    time,
+                                    effort, and investment you've made in your smile.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mini-faq-item">
+                            <button class="mini-faq-question" type="button" aria-expanded="false">
+                                <span>Can I get a replacement retainer if mine is lost or damaged?</span>
+                                <i class="ti ti-chevron-down"></i>
+                            </button>
+                            <div class="mini-faq-answer">
+                                <p>
+                                    Absolutely. If your retainer is lost, broken, or no longer fits properly, our team
+                                    can
+                                    evaluate your smile and provide a replacement retainer to help maintain your
+                                    orthodontic results.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
+
             <!-- Block 4: Pediatric Orthodontics -->
-            <div class="service-block reverse">
-                <div class="service-visual">
-                    <img src="https://bluewhaledental.com/wp-content/uploads/2024/10/Comfortable-Fit.jpg"
-                        alt="Pediatric Orthodontics at Blue Whale Dental Midtown Manhattan" />
+            <div class="service-block service-feature-card">
+                <div class="service-visual enhanced-service-visual">
+                    <img src="https://bluewhaledental.com/wp-content/uploads/2025/06/Invisalign.png"
+                        alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC" />
+
+                    <div class="service-floating-badge">
+                        <i class="ti ti-sparkles" aria-hidden="true"></i>
+                        Early Smile Development
+                    </div>
                 </div>
-                <div class="service-text">
+
+                <div class="service-text enhanced-service-text">
                     <span class="service-eyebrow">Early, Gentle Care</span>
+
                     <h3 class="service-title">Pediatric Orthodontics</h3>
+
                     <p class="service-desc">
-                        Early orthodontic evaluation can help guide jaw growth and tooth development, often
-                        preventing more complex treatment later. Our gentle, kid-friendly approach makes
-                        orthodontic visits a positive experience for children.
+                        Pediatric orthodontics helps identify developing bite, spacing, and jaw growth concerns while a
+                        child’s smile is still
+                        growing. With early evaluation and a gentle, kid-friendly approach, our team helps parents
+                        understand whether treatment
+                        is needed now, later, or simply monitored over time.
                     </p>
-                    <ul class="service-points">
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Early evaluation to guide healthy
-                            growth</li>
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Gentle, kid-friendly treatment
-                            approach</li>
-                        <li><i class="ti ti-circle-check" aria-hidden="true"></i> Personalized treatment timelines for
-                            growing smiles</li>
-                    </ul>
-                    <a href="https://bluewhaledental.com/pediatric-orthodontics-in-midtown-manhattan/"
-                        class="service-link">
-                        Learn More About Pediatric Orthodontics <i class="ti ti-arrow-right" aria-hidden="true"></i>
+
+                    <div class="service-benefit-grid">
+                        <div class="service-benefit-card">
+                            <i class="ti ti-eye-off" aria-hidden="true"></i>
+                            <span>Early Evaluation</span>
+                        </div>
+
+                        <div class="service-benefit-card">
+                            <i class="ti ti-tools-kitchen-2" aria-hidden="true"></i>
+                            <span>Kid-Friendly Care</span>
+                        </div>
+
+                        <div class="service-benefit-card">
+                            <i class="ti ti-scan" aria-hidden="true"></i>
+                            <span>Growth Guidance</span>
+                        </div>
+                    </div>
+                    <div class="service-highlights">
+
+                        <div class="service-highlights-title">
+                            <i class="ti ti-sparkles"></i>
+                            Why Parents Choose Pediatric Orthodontics
+                        </div>
+
+                        <ul class="service-points enhanced-service-points">
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Early evaluation to monitor jaw growth and tooth development
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Gentle, child-friendly visits designed to reduce dental anxiety
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Helps identify crowding, spacing, bite, and growth concerns early
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Personalized guidance for whether treatment is needed now or later
+                            </li>
+
+                            <li>
+                                <i class="ti ti-circle-check"></i>
+                                Supportive care for growing smiles in a comfortable Midtown setting
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <a href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
+                        class="service-link service-link-button">
+                        Learn More About Pediatric Orthodontics
+                        <i class="ti ti-arrow-right" aria-hidden="true"></i>
                     </a>
+
+                    <div class="patient-insights">
+
+                        <div class="patient-insights-header">
+                            <span class="patient-insights-label">
+                                <i class="ti ti-message-circle"></i>
+                                What Parents Often Ask
+                            </span>
+                            <h4>Common Questions About Pediatric Orthodontics</h4>
+                        </div>
+
+                        <div class="mini-faq-item active">
+                            <button class="mini-faq-question" type="button" aria-expanded="true">
+                                <span>When should my child first see an orthodontist?</span>
+                                <i class="ti ti-chevron-down"></i>
+                            </button>
+                            <div class="mini-faq-answer">
+                                <p>
+                                    Many children benefit from an early orthodontic evaluation around age 7, when
+                                    permanent teeth
+                                    are beginning to come in and jaw growth can be assessed. Early visits do not always
+                                    mean early
+                                    treatment; sometimes monitoring is the best next step.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mini-faq-item">
+                            <button class="mini-faq-question" type="button" aria-expanded="false">
+                                <span>Does early orthodontic care prevent braces later?</span>
+                                <i class="ti ti-chevron-down"></i>
+                            </button>
+                            <div class="mini-faq-answer">
+                                <p>
+                                    Early care may help guide jaw development, create space for incoming teeth, or
+                                    reduce the
+                                    complexity of future treatment. Some children may still need braces or aligners
+                                    later, but early
+                                    evaluation helps parents make informed decisions at the right time.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
+
             <!-- ==========================================
                TREATMENT COMPARISON TABLE
                ========================================== -->
@@ -2321,13 +3285,98 @@
             <!-- ==========================================
                TREATMENT FINDER BY AGE
                ========================================== -->
+            <!-- <div class="finder-wrap enhanced-finder-wrap">
+                <div class="section-header">
+                    <span class="section-eyebrow">Not Sure Where to Start?</span>
+                    <h3 class="section-title" style="font-size: 1.9rem;">Find the Right Orthodontic Fit by Age &amp;
+                        Goal</h3>
+                    <p class="section-subtitle">
+                        Orthodontic needs change at every stage of life. Use this quick guide to understand which
+                        treatment
+                        may fit your smile goals before your personalized consultation.
+                    </p>
+                </div>
+
+                <div class="finder-grid enhanced-finder-grid">
+                    <a href="https://bluewhaledental.com/pediatric-orthodontics-in-midtown-manhattan/"
+                        class="finder-card enhanced-finder-card">
+                        <div class="finder-icon">
+                            <i class="ti ti-mood-kid" aria-hidden="true"></i>
+                        </div>
+                        <div class="finder-age">Ages 7&ndash;10</div>
+                        <div class="finder-label">Early Evaluation</div>
+                        <div class="finder-treatment">Pediatric Orthodontics</div>
+                        <p class="finder-desc">
+                            Early screening can identify developing bite, spacing, and jaw growth concerns while your
+                            child’s smile
+                            is still growing.
+                        </p>
+                        <span class="finder-link">Explore Pediatric Care <i class="ti ti-arrow-right"
+                                aria-hidden="true"></i></span>
+                    </a>
+
+                    <a href="https://bluewhaledental.com/traditional-braces-in-midtown-manhattan/"
+                        class="finder-card enhanced-finder-card">
+                        <div class="finder-icon">
+                            <i class="ti ti-dental" aria-hidden="true"></i>
+                        </div>
+                        <div class="finder-age">Teens</div>
+                        <div class="finder-label">Most Common</div>
+                        <div class="finder-treatment">Braces or Invisalign®</div>
+                        <p class="finder-desc">
+                            Teens may benefit from braces or clear aligners depending on alignment needs, lifestyle, and
+                            treatment
+                            responsibility.
+                        </p>
+                        <span class="finder-link">Compare Teen Options <i class="ti ti-arrow-right"
+                                aria-hidden="true"></i></span>
+                    </a>
+
+                    <a href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
+                        class="finder-card enhanced-finder-card">
+                        <div class="finder-icon">
+                            <i class="ti ti-sparkles" aria-hidden="true"></i>
+                        </div>
+                        <div class="finder-age">Adults</div>
+                        <div class="finder-label">Discreet &amp; Flexible</div>
+                        <div class="finder-treatment">Invisalign® Clear Aligners</div>
+                        <p class="finder-desc">
+                            A popular choice for busy professionals who want straighter teeth with a more discreet,
+                            removable
+                            treatment option.
+                        </p>
+                        <span class="finder-link">View Invisalign® <i class="ti ti-arrow-right"
+                                aria-hidden="true"></i></span>
+                    </a>
+
+                    <a href="https://bluewhaledental.com/retainers-at-blue-whale-dental/"
+                        class="finder-card enhanced-finder-card">
+                        <div class="finder-icon">
+                            <i class="ti ti-shield-lock" aria-hidden="true"></i>
+                        </div>
+                        <div class="finder-age">Post-Treatment</div>
+                        <div class="finder-label">Maintain Results</div>
+                        <div class="finder-treatment">Retainers</div>
+                        <p class="finder-desc">
+                            After braces or Invisalign®, custom retainers help prevent shifting and keep your smile
+                            beautifully
+                            aligned.
+                        </p>
+                        <span class="finder-link">Protect Your Smile <i class="ti ti-arrow-right"
+                                aria-hidden="true"></i></span>
+                    </a>
+                </div>
+            </div> -->
+            <!-- ==========================================
+               TREATMENT FINDER BY AGE
+               ========================================== -->
             <div class="finder-wrap">
                 <div class="section-header">
                     <span class="section-eyebrow">Not Sure Where to Start?</span>
                     <h3 class="section-title" style="font-size: 1.9rem;">Find the Right Fit by Age &amp; Goal</h3>
                     <p class="section-subtitle">
                         Orthodontic needs change over time. Here's a general guide to which treatments tend to
-                        fit different stages of life — your consultation will confirm what's right for you.
+                        fit different stages of life your consultation will confirm what's right for you.
                     </p>
                 </div>
 
@@ -2337,7 +3386,10 @@
                         <div class="finder-label">Early Evaluation</div>
                         <div class="finder-treatment">Pediatric Orthodontics</div>
                         <p class="finder-desc">
-                            Early screening can catch developing bite and spacing issues while the jaw is still growing.
+                            Early screening can identify developing bite, spacing, and jaw growth concerns while your
+                            child’s smile is still
+                            growing.
+
                         </p>
                     </div>
                     <div class="finder-card">
@@ -2345,8 +3397,9 @@
                         <div class="finder-label">Most Common</div>
                         <div class="finder-treatment">Braces or Invisalign®</div>
                         <p class="finder-desc">
-                            Both options effectively address alignment as permanent teeth come in — the right
-                            choice depends on the case and lifestyle.
+                            Teens may benefit from braces or clear aligners depending on alignment needs, lifestyle, and
+                            treatment responsibility.
+
                         </p>
                     </div>
                     <div class="finder-card">
@@ -2354,7 +3407,9 @@
                         <div class="finder-label">Discreet &amp; Flexible</div>
                         <div class="finder-treatment">Invisalign® Clear Aligners</div>
                         <p class="finder-desc">
-                            A popular choice for busy professionals who want effective results without visible hardware.
+                            A popular choice for busy professionals who want straighter teeth with a more discreet,
+                            removable treatment option.
+
                         </p>
                     </div>
                     <div class="finder-card">
@@ -2362,12 +3417,13 @@
                         <div class="finder-label">Maintain Results</div>
                         <div class="finder-treatment">Retainers</div>
                         <p class="finder-desc">
-                            After braces or Invisalign, custom retainers keep your smile in its new, aligned position.
+                            After braces or Invisalign®, custom retainers help prevent shifting and keep your smile
+                            beautifully aligned.
+
                         </p>
                     </div>
                 </div>
             </div>
-
         </div>
 
     </section>
@@ -2430,26 +3486,31 @@
                 <span class="section-eyebrow">The Blue Whale Standard</span>
                 <h2 class="section-title">Why Patients Trust Blue Whale Dental for Orthodontics</h2>
                 <p class="section-subtitle">
-                    From first consultation to final retainer fitting, we combine clinical expertise with
-                    personalized, technology-driven care.
+                    Whether you're considering Invisalign®, braces, retainers, or early orthodontic care for your child,
+                    our team combines
+                    personalized treatment planning, advanced technology, and a patient-first approach to help create
+                    healthy, confident
+                    smiles.
                 </p>
             </div>
 
             <div class="pillars-grid">
                 <div class="pillar-card">
-                    <div class="pillar-icon"><i class="ti ti-mood-smile" aria-hidden="true"></i></div>
+                    <div class="pillar-icon"><i class="ti ti-sparkles" aria-hidden="true"></i></div>
                     <h3 class="pillar-title">Natural-Looking Results</h3>
                     <p class="pillar-desc">
-                        Our goal is a smile that looks naturally beautiful and feels authentically yours,
-                        whether you choose aligners or braces.
+                        Our goal is a smile that looks naturally balanced, healthy, and uniquely yours—not an
+                        overcorrected or artificial
+                        result.
                     </p>
                 </div>
                 <div class="pillar-card">
                     <div class="pillar-icon"><i class="ti ti-target-arrow" aria-hidden="true"></i></div>
                     <h3 class="pillar-title">Personalized Treatment Plans</h3>
                     <p class="pillar-desc">
-                        Every smile is unique. We take time to understand your goals and create an orthodontic
-                        plan tailored specifically to you.
+                        Every smile is different. We take time to understand your goals and create a customized
+                        orthodontic plan designed around
+                        your needs and lifestyle.
                     </p>
                 </div>
                 <div class="pillar-card">
@@ -2461,27 +3522,30 @@
                     </p>
                 </div>
                 <div class="pillar-card">
-                    <div class="pillar-icon"><i class="ti ti-stack-2" aria-hidden="true"></i></div>
+                    <div class="pillar-icon"><i class="ti ti-layers-intersect" aria-hidden="true"></i></div>
                     <h3 class="pillar-title">Complete Orthodontic Solutions</h3>
                     <p class="pillar-desc">
-                        From Invisalign and braces to retainers and pediatric orthodontics, we provide
-                        comprehensive care under one roof.
+                        From Invisalign® and traditional braces to retainers and pediatric orthodontics, we provide
+                        comprehensive care under one
+                        roof.
                     </p>
                 </div>
                 <div class="pillar-card">
-                    <div class="pillar-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
-                    <h3 class="pillar-title">Unmatched Midtown Convenience</h3>
+                    <div class="pillar-icon"><i class="ti ti-heart-handshake" aria-hidden="true"></i></div>
+                    <h3 class="pillar-title">Comfort-Focused Experience</h3>
                     <p class="pillar-desc">
-                        Located at 10 W. 46th Street #1402, just steps from Bryant Park, with flexible
-                        scheduling designed for the busy NYC lifestyle.
+                        We prioritize clear communication, gentle care, and a supportive environment to help patients of
+                        all ages feel
+                        comfortable throughout treatment.
                     </p>
                 </div>
                 <div class="pillar-card">
-                    <div class="pillar-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
-                    <h3 class="pillar-title">Unmatched Midtown Convenience</h3>
+                    <div class="pillar-icon"><i class="ti ti-building-skyscraper" aria-hidden="true"></i></div>
+                    <h3 class="pillar-title">Designed for Busy NYC Lifestyles</h3>
                     <p class="pillar-desc">
-                        Located at 10 W. 46th Street #1402, just steps from Bryant Park, with flexible
-                        scheduling designed for the busy NYC lifestyle.
+                        Flexible scheduling and a convenient Midtown Manhattan location make it easier to fit
+                        orthodontic care into your work,
+                        school, and family routine.
                     </p>
                 </div>
             </div>
@@ -2535,7 +3599,7 @@
                     pediatric orthodontic care.
                 </p>
             </div>
-    
+
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="quote-icon"><i class="ti ti-quote" aria-hidden="true"></i></div>
@@ -2558,7 +3622,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="testimonial-card">
                     <div class="quote-icon"><i class="ti ti-quote" aria-hidden="true"></i></div>
                     <div class="rating-stars">
@@ -2580,7 +3644,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="testimonial-card">
                     <div class="quote-icon"><i class="ti ti-quote" aria-hidden="true"></i></div>
                     <div class="rating-stars">
@@ -2606,29 +3670,54 @@
         </div>
     </section>
     <!-- Insurance & Financing Band -->
+    <!-- Insurance & Financing Band -->
     <section class="section" id="insurance">
         <div class="container">
-            <div class="insurance-band">
+            <div class="insurance-band enhanced-insurance-band">
                 <div class="insurance-text">
                     <span class="section-eyebrow">Cost &amp; Coverage</span>
-                    <h2>Affordable Orthodontic Care, Made Simple</h2>
+                    <h2>Orthodontic Care That Fits Your Budget</h2>
                     <p>
-                        We believe a straighter smile shouldn't be out of reach. We work with most major dental
-                        insurance providers and offer flexible financing options so you can begin treatment with
-                        confidence. Our team will walk you through your coverage and out-of-pocket costs during
-                        your consultation — no surprises.
+                        We believe planning your smile should feel clear from the beginning. Our team can help you
+                        review your orthodontic insurance benefits, explain estimated out-of-pocket costs, and discuss
+                        flexible payment options before treatment begins.
                     </p>
+
+                    <a href="https://bluewhaledental.com/trusted-dentist-near-me-in-midtown-manhattan/"
+                        class="insurance-cta">
+                        Schedule a Consultation
+                        <i class="ti ti-arrow-right" aria-hidden="true"></i>
+                    </a>
                 </div>
-                <ul class="insurance-list">
-                    <li><i class="ti ti-shield-check" aria-hidden="true"></i> Most major dental insurance plans accepted
-                    </li>
-                    <li><i class="ti ti-credit-card" aria-hidden="true"></i> CareCredit &amp; flexible payment plans</li>
-                    <li><i class="ti ti-receipt" aria-hidden="true"></i> Transparent cost breakdown before treatment</li>
-                    <li><i class="ti ti-calendar-dollar" aria-hidden="true"></i> Monthly payment options available</li>
-                </ul>
+
+                <div class="insurance-card-grid">
+                    <div class="insurance-mini-card">
+                        <i class="ti ti-shield-check" aria-hidden="true"></i>
+                        <h3>Insurance Guidance</h3>
+                        <p>Our team can help review your plan and explain available orthodontic benefits.</p>
+                    </div>
+
+                    <div class="insurance-mini-card">
+                        <i class="ti ti-credit-card" aria-hidden="true"></i>
+                        <h3>Flexible Payments</h3>
+                        <p>Payment options may be available to make treatment easier to manage over time.</p>
+                    </div>
+
+                    <div class="insurance-mini-card">
+                        <i class="ti ti-receipt" aria-hidden="true"></i>
+                        <h3>Clear Cost Review</h3>
+                        <p>We’ll walk through treatment fees and estimated costs before you begin care.</p>
+                    </div>
+
+                    <div class="insurance-mini-card">
+                        <i class="ti ti-calendar-dollar" aria-hidden="true"></i>
+                        <h3>Plan Before Starting</h3>
+                        <p>Understand your options first, then choose the treatment path that fits your needs.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>  
+    </section>
     <!-- ==========================================
        FAQ SECTION
        ========================================== -->
@@ -2921,5 +4010,35 @@
         }
     </script>
 </body>
+<script>
+    document.querySelectorAll(".patient-insights").forEach((insightBox) => {
+        const items = insightBox.querySelectorAll(".mini-faq-item");
+
+        items.forEach((item) => {
+            const button = item.querySelector(".mini-faq-question");
+            const answer = item.querySelector(".mini-faq-answer");
+
+            if (item.classList.contains("active")) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+
+            button.addEventListener("click", () => {
+                const isActive = item.classList.contains("active");
+
+                items.forEach((otherItem) => {
+                    otherItem.classList.remove("active");
+                    otherItem.querySelector(".mini-faq-answer").style.maxHeight = "0px";
+                    otherItem.querySelector(".mini-faq-question").setAttribute("aria-expanded", "false");
+                });
+
+                if (!isActive) {
+                    item.classList.add("active");
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    button.setAttribute("aria-expanded", "true");
+                }
+            });
+        });
+    });
+</script>
 
 </html>
