@@ -963,18 +963,26 @@
                 background: var(--bg-alabaster);
                 overflow: hidden;
             }
-            
+
             .outcomes-wrap {
                 display: grid;
                 grid-template-columns: 0.85fr 1.35fr;
                 gap: 36px;
                 align-items: stretch;
             }
-            
+
             .outcome-feature-card {
                 background:
-                    radial-gradient(circle at top right, rgba(25, 150, 240, 0.14), transparent 42%),
-                    linear-gradient(135deg, var(--primary-blue), hsl(208, 76%, 24%));
+                    radial-gradient(
+                        circle at top right,
+                        rgba(25, 150, 240, 0.14),
+                        transparent 42%
+                    ),
+                    linear-gradient(
+                        135deg,
+                        var(--primary-blue),
+                        hsl(208, 76%, 24%)
+                    );
                 color: var(--white);
                 border-radius: 26px;
                 padding: 42px 36px;
@@ -986,7 +994,7 @@
                 overflow: hidden;
                 box-shadow: 0 18px 45px rgba(19, 84, 140, 0.12);
             }
-            
+
             .outcome-feature-card::before {
                 content: "";
                 position: absolute;
@@ -997,7 +1005,7 @@
                 border-radius: 50%;
                 background: rgba(255, 255, 255, 0.08);
             }
-            
+
             .outcome-feature-icon {
                 width: 64px;
                 height: 64px;
@@ -1012,7 +1020,7 @@
                 position: relative;
                 z-index: 2;
             }
-            
+
             .outcome-feature-card h3 {
                 font-family: var(--font-headings);
                 font-size: 1.75rem;
@@ -1021,7 +1029,7 @@
                 position: relative;
                 z-index: 2;
             }
-            
+
             .outcome-feature-card p {
                 font-size: 0.95rem;
                 line-height: 1.7;
@@ -1030,13 +1038,13 @@
                 position: relative;
                 z-index: 2;
             }
-            
+
             .outcome-grid {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 22px;
             }
-            
+
             .outcome-card {
                 background: var(--white);
                 border: 1px solid var(--glass-border);
@@ -1047,32 +1055,36 @@
                 position: relative;
                 overflow: hidden;
             }
-            
+
             .outcome-card::after {
                 content: "";
                 position: absolute;
                 inset: auto 0 0 0;
                 height: 4px;
-                background: linear-gradient(90deg, var(--primary-blue), var(--accent-sky));
+                background: linear-gradient(
+                    90deg,
+                    var(--primary-blue),
+                    var(--accent-sky)
+                );
                 transform: scaleX(0);
                 transform-origin: left;
                 transition: var(--transition-smooth);
             }
-            
+
             .outcome-card:hover {
                 transform: translateY(-6px);
                 box-shadow: 0 16px 36px rgba(19, 84, 140, 0.06);
                 border-color: rgba(25, 150, 240, 0.2);
             }
-            
+
             .outcome-card:hover::after {
                 transform: scaleX(1);
             }
-            
+
             .outcome-card-wide {
                 grid-column: span 2;
             }
-            
+
             .outcome-icon {
                 width: 50px;
                 height: 50px;
@@ -1085,7 +1097,7 @@
                 font-size: 1.5rem;
                 margin-bottom: 18px;
             }
-            
+
             .outcome-card h3 {
                 font-family: var(--font-headings);
                 font-size: 1.15rem;
@@ -1094,7 +1106,7 @@
                 margin-bottom: 10px;
                 line-height: 1.3;
             }
-            
+
             .outcome-card p {
                 font-size: 0.9rem;
                 color: var(--text-muted);
@@ -1102,26 +1114,26 @@
                 font-weight: 300;
                 margin: 0;
             }
-            
+
             @media (max-width: 1024px) {
                 .outcomes-wrap {
                     grid-template-columns: 1fr;
                 }
-            
+
                 .outcome-feature-card {
                     min-height: auto;
                 }
             }
-            
+
             @media (max-width: 768px) {
                 .outcome-grid {
                     grid-template-columns: 1fr;
                 }
-            
+
                 .outcome-card-wide {
                     grid-column: span 1;
                 }
-            
+
                 .outcome-feature-card {
                     padding: 34px 26px;
                     border-radius: 22px;
@@ -1333,6 +1345,53 @@
                 pointer-events: none;
             }
 
+            /* ==========================================
+               STICKY SERVICE CARD VERSION
+               Use this only for service cards where image should stick
+               ========================================== */
+            
+            .sticky-service-card {
+                overflow: visible;
+                align-items: start;
+            }
+            
+            .sticky-service-card::before {
+                border-radius: 24px;
+            }
+            
+            @media (min-width: 1025px) {
+                .sticky-service-card .enhanced-service-visual {
+                    position: sticky;
+                    top: 120px;
+                    align-self: start;
+                    min-height: calc(100vh - 170px);
+                    height: calc(100vh - 170px);
+                }
+            
+                .sticky-service-card .enhanced-service-visual img {
+                    width: 100%;
+                    height: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                }
+            
+                .sticky-service-card .enhanced-service-text {
+                    padding-top: 8px;
+                }
+            }
+            
+            @media (max-width: 1024px) {
+                .sticky-service-card {
+                    overflow: hidden;
+                }
+            
+                .sticky-service-card .enhanced-service-visual {
+                    position: relative;
+                    top: auto;
+                    height: auto;
+                    min-height: 320px;
+                }
+            }
             .enhanced-service-visual {
                 position: relative;
                 border-radius: 20px;
@@ -3275,95 +3334,117 @@
             </div>
         </section>
 
-
         <!-- ==========================================
            OUTCOME-BASED SECTION
            ========================================== -->
-        <section class="section cosmetic-outcomes-section" id="cosmetic-dentistry-outcomes">
+        <section
+            class="section cosmetic-outcomes-section"
+            id="cosmetic-dentistry-outcomes"
+        >
             <div class="container">
-        
                 <div class="section-header">
-                    <span class="section-eyebrow">Beyond Aesthetic Dentistry</span>
-                    <h2 class="section-title">How Cosmetic Dentistry Improves More Than Appearance</h2>
+                    <span class="section-eyebrow"
+                        >Beyond Aesthetic Dentistry</span
+                    >
+                    <h2 class="section-title">
+                        How Cosmetic Dentistry Improves More Than Appearance
+                    </h2>
                     <p class="section-subtitle">
-                        A beautiful smile can change how you feel in everyday moments, from professional meetings
-                        to photos, social events, and conversations.
+                        A beautiful smile can change how you feel in everyday
+                        moments, from professional meetings to photos, social
+                        events, and conversations.
                     </p>
                 </div>
-        
+
                 <div class="outcomes-wrap">
-        
                     <div class="outcome-feature-card">
                         <div class="outcome-feature-icon">
                             <i class="ti ti-mood-smile" aria-hidden="true"></i>
                         </div>
                         <h3>Confidence You Can Feel Every Day</h3>
                         <p>
-                            Cosmetic dentistry is not only about changing how your smile looks. It can help you feel
-                            more relaxed, expressive, and comfortable in the moments that matter.
+                            Cosmetic dentistry is not only about changing how
+                            your smile looks. It can help you feel more relaxed,
+                            expressive, and comfortable in the moments that
+                            matter.
                         </p>
                     </div>
-        
+
                     <div class="outcome-grid">
-        
                         <div class="outcome-card">
                             <div class="outcome-icon">
                                 <i class="ti ti-heart" aria-hidden="true"></i>
                             </div>
                             <h3>Greater Confidence</h3>
                             <p>
-                                Feel more comfortable smiling, laughing, and speaking without hiding your teeth.
+                                Feel more comfortable smiling, laughing, and
+                                speaking without hiding your teeth.
                             </p>
                         </div>
-        
+
                         <div class="outcome-card">
                             <div class="outcome-icon">
-                                <i class="ti ti-adjustments-horizontal" aria-hidden="true"></i>
+                                <i
+                                    class="ti ti-adjustments-horizontal"
+                                    aria-hidden="true"
+                                ></i>
                             </div>
                             <h3>A More Balanced Smile</h3>
                             <p>
-                                Improve tooth color, shape, spacing, and proportion for a more harmonious overall look.
+                                Improve tooth color, shape, spacing, and
+                                proportion for a more harmonious overall look.
                             </p>
                         </div>
-        
+
                         <div class="outcome-card">
                             <div class="outcome-icon">
-                                <i class="ti ti-user-star" aria-hidden="true"></i>
+                                <i
+                                    class="ti ti-user-star"
+                                    aria-hidden="true"
+                                ></i>
                             </div>
                             <h3>Better First Impressions</h3>
                             <p>
-                                A bright, healthy-looking smile can help you feel more polished and confident in
-                                personal and professional settings.
+                                A bright, healthy-looking smile can help you
+                                feel more polished and confident in personal and
+                                professional settings.
                             </p>
                         </div>
-        
+
                         <div class="outcome-card">
                             <div class="outcome-icon">
-                                <i class="ti ti-target-arrow" aria-hidden="true"></i>
+                                <i
+                                    class="ti ti-target-arrow"
+                                    aria-hidden="true"
+                                ></i>
                             </div>
                             <h3>Personalized Results</h3>
                             <p>
-                                Your cosmetic plan is designed around your facial features, smile line, and long-term goals.
+                                Your cosmetic plan is designed around your
+                                facial features, smile line, and long-term
+                                goals.
                             </p>
                         </div>
-        
+
                         <div class="outcome-card outcome-card-wide">
                             <div class="outcome-icon">
-                                <i class="ti ti-shield-check" aria-hidden="true"></i>
+                                <i
+                                    class="ti ti-shield-check"
+                                    aria-hidden="true"
+                                ></i>
                             </div>
                             <h3>Long-Term Smile Motivation</h3>
                             <p>
-                                Many patients feel more motivated to maintain their oral health after investing in their smile.
+                                Many patients feel more motivated to maintain
+                                their oral health after investing in their
+                                smile.
                             </p>
                         </div>
-        
                     </div>
-        
                 </div>
-        
             </div>
         </section>
-        
+
         <!-- ==========================================
        Meet Your Orthodontic Team Section
        ========================================== -->
@@ -3477,262 +3558,294 @@
        ========================================== -->
         <section class="section" id="services-overview">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-eyebrow"
-                        >Our Orthodontic Treatments</span
-                    >
-                    <h2 class="section-title">
-                        Explore Our Orthodontic Services
-                    </h2>
-                    <p class="section-subtitle">
-                        Every smile journey is different. Discover which
-                        orthodontic treatment fits your goals, lifestyle, and
-                        timeline — and dive deeper into each option below.
-                    </p>
-                </div>
+                    <div class="section-header">
+                        <span class="section-eyebrow"
+                            >Our Orthodontic Treatments</span
+                        >
+                        <h2 class="section-title">
+                            Explore Our Orthodontic Services
+                        </h2>
+                        <p class="section-subtitle">
+                            Every smile journey is different. Discover which
+                            orthodontic treatment fits your goals, lifestyle,
+                            and timeline — and dive deeper into each option
+                            below.
+                        </p>
+                    </div>
+                    
+                    <!-- Block 1: Invisalign - Improved Service Overview -->
+                    <div class="service-block service-feature-card sticky-service-card">
+                        <div
+                            class="service-visual enhanced-service-visual concerns-intro"
+                        >
+                            <img
+                                src="https://bluewhaledental.com/wp-content/uploads/2025/06/Invisalign.png"
+                                alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC"
+                            />
 
-                <!-- Block 1: Invisalign - Improved Service Overview -->
-                <div class="service-block service-feature-card">
-                    <div class="service-visual enhanced-service-visual">
-                        <img
-                            src="https://bluewhaledental.com/wp-content/uploads/2025/06/Invisalign.png"
-                            alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC"
-                        />
+                            <div class="service-floating-badge">
+                                <i
+                                    class="ti ti-sparkles"
+                                    aria-hidden="true"
+                                ></i>
+                                Popular for Adults
+                            </div>
+                        </div>
 
-                        <div class="service-floating-badge">
-                            <i class="ti ti-sparkles" aria-hidden="true"></i>
-                            Popular for Adults
+                        <div class="service-text enhanced-service-text">
+                            <span class="service-eyebrow"
+                                >Discreet &amp; Removable</span
+                            >
+
+                            <h3 class="service-title">
+                                Invisalign® Clear Aligners
+                            </h3>
+
+                            <p class="service-desc">
+                                Straighten your smile with clear, removable
+                                aligners designed for comfort, convenience, and
+                                a more discreet orthodontic experience.
+                                Invisalign® is ideal for busy Midtown
+                                professionals, teens, and adults who want
+                                effective treatment without the look of metal
+                                braces.
+                            </p>
+
+                            <div class="service-benefit-grid">
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-eye-off"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Nearly Invisible</span>
+                                </div>
+
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-tools-kitchen-2"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Removable for Meals</span>
+                                </div>
+
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-scan"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Digitally Planned</span>
+                                </div>
+                            </div>
+                            <div class="service-highlights">
+                                <div class="service-highlights-title">
+                                    <i class="ti ti-sparkles"></i>
+                                    Why Patients Choose Invisalign®
+                                </div>
+
+                                <ul
+                                    class="service-points enhanced-service-points"
+                                >
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Custom-crafted aligners designed around
+                                        your unique smile goals
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Flexible treatment that fits work,
+                                        school, travel, and social events
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Predictable treatment planning with
+                                        advanced digital technology
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Easier brushing and flossing compared
+                                        with traditional braces
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Comfortable, smooth trays with no
+                                        brackets or wires
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a
+                                href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
+                                class="service-link service-link-button"
+                            >
+                                Learn More About Invisalign®
+                                <i
+                                    class="ti ti-arrow-right"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                            <div class="patient-insights">
+                                <div class="patient-insights-header">
+                                    <span class="patient-insights-label">
+                                        <i class="ti ti-message-circle"></i>
+                                        What Patients Often Ask
+                                    </span>
+                                    <h4>Common Questions About Invisalign®</h4>
+                                </div>
+
+                                <div class="mini-faq-item active">
+                                    <button
+                                        class="mini-faq-question"
+                                        type="button"
+                                        aria-expanded="true"
+                                    >
+                                        <span
+                                            >Will people know I'm wearing
+                                            Invisalign®?</span
+                                        >
+                                        <i class="ti ti-chevron-down"></i>
+                                    </button>
+                                    <div class="mini-faq-answer">
+                                        <p>
+                                            Most patients find that friends,
+                                            coworkers, and clients rarely notice
+                                            their aligners. The clear trays are
+                                            designed to be discreet, making
+                                            Invisalign® a popular choice for
+                                            professionals and adults who prefer
+                                            a less noticeable orthodontic
+                                            treatment.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="mini-faq-item">
+                                    <button
+                                        class="mini-faq-question"
+                                        type="button"
+                                        aria-expanded="false"
+                                    >
+                                        <span
+                                            >Is Invisalign® worth it for
+                                            adults?</span
+                                        >
+                                        <i class="ti ti-chevron-down"></i>
+                                    </button>
+                                    <div class="mini-faq-answer">
+                                        <p>
+                                            For many adults, Invisalign® offers
+                                            the ideal balance of convenience,
+                                            comfort, and aesthetics. It can
+                                            address crowding, spacing, and mild
+                                            bite concerns without the appearance
+                                            of traditional braces.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="service-text enhanced-service-text">
-                        <span class="service-eyebrow"
-                            >Discreet &amp; Removable</span
-                        >
+                    <!-- Block 2: Traditional Braces Service Overview -->
+                    <div class="service-block service-feature-card sticky-service-card">
+                        <div class="service-text enhanced-service-text">
+                            <span class="service-eyebrow"
+                                >Proven &amp;Reliable</span
+                            >
 
-                        <h3 class="service-title">
-                            Invisalign® Clear Aligners
-                        </h3>
+                            <h3 class="service-title">Traditional Braces</h3>
 
-                        <p class="service-desc">
-                            Straighten your smile with clear, removable aligners
-                            designed for comfort, convenience, and a more
-                            discreet orthodontic experience. Invisalign® is
-                            ideal for busy Midtown professionals, teens, and
-                            adults who want effective treatment without the look
-                            of metal braces.
-                        </p>
+                            <p class="service-desc">
+                                Traditional braces remain one of the most
+                                trusted and effective orthodontic treatments for
+                                correcting moderate to complex alignment
+                                concerns. Using modern bracket systems and
+                                personalized treatment planning, braces can
+                                address crowding, spacing, bite issues, and
+                                tooth movement with predictable, long-lasting
+                                results for both teens and adults.
+                            </p>
 
-                        <div class="service-benefit-grid">
-                            <div class="service-benefit-card">
-                                <i class="ti ti-eye-off" aria-hidden="true"></i>
-                                <span>Nearly Invisible</span>
-                            </div>
+                            <div class="service-benefit-grid">
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-eye-off"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Complex Cases</span>
+                                </div>
 
-                            <div class="service-benefit-card">
-                                <i
-                                    class="ti ti-tools-kitchen-2"
-                                    aria-hidden="true"
-                                ></i>
-                                <span>Removable for Meals</span>
-                            </div>
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-tools-kitchen-2"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Removable for Meals</span>
+                                </div>
 
-                            <div class="service-benefit-card">
-                                <i class="ti ti-scan" aria-hidden="true"></i>
-                                <span>Digitally Planned</span>
-                            </div>
-                        </div>
-                        <div class="service-highlights">
-                            <div class="service-highlights-title">
-                                <i class="ti ti-sparkles"></i>
-                                Why Patients Choose Invisalign®
-                            </div>
-
-                            <ul class="service-points enhanced-service-points">
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Custom-crafted aligners designed around your
-                                    unique smile goals
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Flexible treatment that fits work, school,
-                                    travel, and social events
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Predictable treatment planning with advanced
-                                    digital technology
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Easier brushing and flossing compared with
-                                    traditional braces
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Comfortable, smooth trays with no brackets
-                                    or wires
-                                </li>
-                            </ul>
-                        </div>
-
-                        <a
-                            href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
-                            class="service-link service-link-button"
-                        >
-                            Learn More About Invisalign®
-                            <i class="ti ti-arrow-right" aria-hidden="true"></i>
-                        </a>
-                        <div class="patient-insights">
-                            <div class="patient-insights-header">
-                                <span class="patient-insights-label">
-                                    <i class="ti ti-message-circle"></i>
-                                    What Patients Often Ask
-                                </span>
-                                <h4>Common Questions About Invisalign®</h4>
-                            </div>
-
-                            <div class="mini-faq-item active">
-                                <button
-                                    class="mini-faq-question"
-                                    type="button"
-                                    aria-expanded="true"
-                                >
-                                    <span
-                                        >Will people know I'm wearing
-                                        Invisalign®?</span
-                                    >
-                                    <i class="ti ti-chevron-down"></i>
-                                </button>
-                                <div class="mini-faq-answer">
-                                    <p>
-                                        Most patients find that friends,
-                                        coworkers, and clients rarely notice
-                                        their aligners. The clear trays are
-                                        designed to be discreet, making
-                                        Invisalign® a popular choice for
-                                        professionals and adults who prefer a
-                                        less noticeable orthodontic treatment.
-                                    </p>
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-scan"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>All Ages</span>
                                 </div>
                             </div>
-
-                            <div class="mini-faq-item">
-                                <button
-                                    class="mini-faq-question"
-                                    type="button"
-                                    aria-expanded="false"
-                                >
-                                    <span
-                                        >Is Invisalign® worth it for
-                                        adults?</span
-                                    >
-                                    <i class="ti ti-chevron-down"></i>
-                                </button>
-                                <div class="mini-faq-answer">
-                                    <p>
-                                        For many adults, Invisalign® offers the
-                                        ideal balance of convenience, comfort,
-                                        and aesthetics. It can address crowding,
-                                        spacing, and mild bite concerns without
-                                        the appearance of traditional braces.
-                                    </p>
+                            <div class="service-highlights">
+                                <div class="service-highlights-title">
+                                    <i class="ti ti-sparkles"></i>
+                                    Why Patients Choose Traditional Braces
                                 </div>
+
+                                <ul
+                                    class="service-points enhanced-service-points"
+                                >
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Corrects complex crowding, spacing, and
+                                        bite issues
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Reliable and highly effective for
+                                        advanced tooth movement
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Modern low-profile brackets designed for
+                                        improved comfort
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Suitable for both teens and adults
+                                        seeking lasting results
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Provides continuous treatment without
+                                        needing patient compliance
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Block 2: Traditional Braces Service Overview -->
-                <div class="service-block service-feature-card">
-                    <div class="service-text enhanced-service-text">
-                        <span class="service-eyebrow"
-                            >Proven &amp;Reliable</span
-                        >
-
-                        <h3 class="service-title">Traditional Braces</h3>
-
-                        <p class="service-desc">
-                            Traditional braces remain one of the most trusted
-                            and effective orthodontic treatments for correcting
-                            moderate to complex alignment concerns. Using modern
-                            bracket systems and personalized treatment planning,
-                            braces can address crowding, spacing, bite issues,
-                            and tooth movement with predictable, long-lasting
-                            results for both teens and adults.
-                        </p>
-
-                        <div class="service-benefit-grid">
-                            <div class="service-benefit-card">
-                                <i class="ti ti-eye-off" aria-hidden="true"></i>
-                                <span>Complex Cases</span>
-                            </div>
-
-                            <div class="service-benefit-card">
+                            <a
+                                href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
+                                class="service-link service-link-button"
+                            >
+                                Learn More About Traditional Braces
                                 <i
-                                    class="ti ti-tools-kitchen-2"
+                                    class="ti ti-arrow-right"
                                     aria-hidden="true"
                                 ></i>
-                                <span>Removable for Meals</span>
-                            </div>
-
-                            <div class="service-benefit-card">
-                                <i class="ti ti-scan" aria-hidden="true"></i>
-                                <span>All Ages</span>
-                            </div>
-                        </div>
-                        <div class="service-highlights">
-                            <div class="service-highlights-title">
-                                <i class="ti ti-sparkles"></i>
-                                Why Patients Choose Traditional Braces
-                            </div>
-
-                            <ul class="service-points enhanced-service-points">
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Corrects complex crowding, spacing, and bite
-                                    issues
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Reliable and highly effective for advanced
-                                    tooth movement
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Modern low-profile brackets designed for
-                                    improved comfort
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Suitable for both teens and adults seeking
-                                    lasting results
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Provides continuous treatment without
-                                    needing patient compliance
-                                </li>
-                            </ul>
-                        </div>
-
-                        <a
-                            href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
-                            class="service-link service-link-button"
-                        >
-                            Learn More About Traditional Braces
-                            <i class="ti ti-arrow-right" aria-hidden="true"></i>
-                        </a>
-                        <!-- <div class="patient-insights">
+                            </a>
+                            <!-- <div class="patient-insights">
 
                         <div class="patient-insights-header">
                             <span class="patient-insights-label">
@@ -3776,425 +3889,469 @@
                         </div>
 
                     </div> -->
-                    </div>
-                    <div class="service-visual enhanced-service-visual">
-                        <img
-                            src="https://bluewhaledental.com/wp-content/uploads/2024/10/Aligners-1024x1024.png"
-                            alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC"
-                        />
-
-                        <div class="service-floating-badge">
-                            <i class="ti ti-sparkles" aria-hidden="true"></i>
-                            Ideal for Complex Cases
                         </div>
-                    </div>
-                </div>
+                        <div class="service-visual enhanced-service-visual">
+                            <img
+                                src="https://bluewhaledental.com/wp-content/uploads/2024/10/Aligners-1024x1024.png"
+                                alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC"
+                            />
 
-                <!-- Block 3: Retainers -->
-                <div class="service-block service-feature-card">
-                    <div class="service-visual enhanced-service-visual">
-                        <img
-                            src="https://bluewhaledental.com/wp-content/uploads/2024/10/Comfortable-Fit.jpg"
-                            alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC"
-                        />
-
-                        <div class="service-floating-badge">
-                            <i class="ti ti-sparkles" aria-hidden="true"></i>
-                            Protects Your Results
-                        </div>
-                    </div>
-
-                    <div class="service-text enhanced-service-text">
-                        <span class="service-eyebrow"
-                            >Proven &amp;Reliable</span
-                        >
-
-                        <h3 class="service-title">Retainers</h3>
-
-                        <p class="service-desc">
-                            Completing orthodontic treatment is only the
-                            beginning of maintaining your new smile. Custom
-                            retainers help keep your teeth in their corrected
-                            positions, reducing the risk of shifting over time.
-                            Whether you've completed Invisalign® or traditional
-                            braces treatment, our comfortable, custom-fit
-                            retainers are designed to protect your results for
-                            years to come.
-                        </p>
-
-                        <div class="service-benefit-grid">
-                            <div class="service-benefit-card">
-                                <i class="ti ti-eye-off" aria-hidden="true"></i>
-                                <span>Custom Fit</span>
-                            </div>
-
-                            <div class="service-benefit-card">
+                            <div class="service-floating-badge">
                                 <i
-                                    class="ti ti-tools-kitchen-2"
+                                    class="ti ti-sparkles"
                                     aria-hidden="true"
                                 ></i>
-                                <span>Prevents Shifting</span>
-                            </div>
-
-                            <div class="service-benefit-card">
-                                <i class="ti ti-scan" aria-hidden="true"></i>
-                                <span>Long-Term Protection</span>
-                            </div>
-                        </div>
-                        <div class="service-highlights">
-                            <div class="service-highlights-title">
-                                <i class="ti ti-sparkles"></i>
-                                Why Patients Choose Custom Retainers
-                            </div>
-
-                            <ul class="service-points enhanced-service-points">
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Custom-crafted for a secure and comfortable
-                                    fit
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Helps prevent unwanted tooth movement after
-                                    treatment
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Suitable for patients who completed
-                                    Invisalign® or braces
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Durable materials designed for everyday wear
-                                </li>
-
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Protects your investment in a straighter,
-                                    healthier smile
-                                </li>
-                            </ul>
-                        </div>
-
-                        <a
-                            href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
-                            class="service-link service-link-button"
-                        >
-                            Learn More About Retainers
-                            <i class="ti ti-arrow-right" aria-hidden="true"></i>
-                        </a>
-
-                        <div class="patient-insights">
-                            <div class="patient-insights-header">
-                                <span class="patient-insights-label">
-                                    <i class="ti ti-message-circle"></i>
-                                    What Patients Often Ask
-                                </span>
-                                <h4>Common Questions About Retainers</h4>
-                            </div>
-
-                            <div class="mini-faq-item active">
-                                <button
-                                    class="mini-faq-question"
-                                    type="button"
-                                    aria-expanded="true"
-                                >
-                                    <span
-                                        >Do I really need to wear a retainer
-                                        after treatment?</span
-                                    >
-                                    <i class="ti ti-chevron-down"></i>
-                                </button>
-                                <div class="mini-faq-answer">
-                                    <p>
-                                        Yes. Teeth naturally tend to shift over
-                                        time, even after successful orthodontic
-                                        treatment. Wearing your retainer as
-                                        directed helps preserve your new
-                                        alignment and protects the time, effort,
-                                        and investment you've made in your
-                                        smile.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="mini-faq-item">
-                                <button
-                                    class="mini-faq-question"
-                                    type="button"
-                                    aria-expanded="false"
-                                >
-                                    <span
-                                        >Can I get a replacement retainer if
-                                        mine is lost or damaged?</span
-                                    >
-                                    <i class="ti ti-chevron-down"></i>
-                                </button>
-                                <div class="mini-faq-answer">
-                                    <p>
-                                        Absolutely. If your retainer is lost,
-                                        broken, or no longer fits properly, our
-                                        team can evaluate your smile and provide
-                                        a replacement retainer to help maintain
-                                        your orthodontic results.
-                                    </p>
-                                </div>
+                                Ideal for Complex Cases
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Block 4: Pediatric Orthodontics -->
-                <div class="service-block service-feature-card">
-                    <div class="service-text enhanced-service-text">
-                        <span class="service-eyebrow">Early, Gentle Care</span>
+                    <!-- Block 3: Retainers -->
+                    <div class="service-block service-feature-card sticky-service-card">
+                        <div class="service-visual enhanced-service-visual">
+                            <img
+                                src="https://bluewhaledental.com/wp-content/uploads/2024/10/Comfortable-Fit.jpg"
+                                alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC"
+                            />
 
-                        <h3 class="service-title">Pediatric Orthodontics</h3>
-
-                        <p class="service-desc">
-                            Pediatric orthodontics helps identify developing
-                            bite, spacing, and jaw growth concerns while a
-                            child’s smile is still growing. With early
-                            evaluation and a gentle, kid-friendly approach, our
-                            team helps parents understand whether treatment is
-                            needed now, later, or simply monitored over time.
-                        </p>
-
-                        <div class="service-benefit-grid">
-                            <div class="service-benefit-card">
-                                <i class="ti ti-eye-off" aria-hidden="true"></i>
-                                <span>Early Evaluation</span>
-                            </div>
-
-                            <div class="service-benefit-card">
+                            <div class="service-floating-badge">
                                 <i
-                                    class="ti ti-tools-kitchen-2"
+                                    class="ti ti-sparkles"
                                     aria-hidden="true"
                                 ></i>
-                                <span>Kid-Friendly Care</span>
-                            </div>
-
-                            <div class="service-benefit-card">
-                                <i class="ti ti-scan" aria-hidden="true"></i>
-                                <span>Growth Guidance</span>
+                                Protects Your Results
                             </div>
                         </div>
-                        <div class="service-highlights">
-                            <div class="service-highlights-title">
-                                <i class="ti ti-sparkles"></i>
-                                Why Parents Choose Pediatric Orthodontics
-                            </div>
 
-                            <ul class="service-points enhanced-service-points">
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Early evaluation to monitor jaw growth and
-                                    tooth development
-                                </li>
+                        <div class="service-text enhanced-service-text">
+                            <span class="service-eyebrow"
+                                >Proven &amp;Reliable</span
+                            >
 
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Gentle, child-friendly visits designed to
-                                    reduce dental anxiety
-                                </li>
+                            <h3 class="service-title">Retainers</h3>
 
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Helps identify crowding, spacing, bite, and
-                                    growth concerns early
-                                </li>
+                            <p class="service-desc">
+                                Completing orthodontic treatment is only the
+                                beginning of maintaining your new smile. Custom
+                                retainers help keep your teeth in their
+                                corrected positions, reducing the risk of
+                                shifting over time. Whether you've completed
+                                Invisalign® or traditional braces treatment, our
+                                comfortable, custom-fit retainers are designed
+                                to protect your results for years to come.
+                            </p>
 
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Personalized guidance for whether treatment
-                                    is needed now or later
-                                </li>
+                            <div class="service-benefit-grid">
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-eye-off"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Custom Fit</span>
+                                </div>
 
-                                <li>
-                                    <i class="ti ti-circle-check"></i>
-                                    Supportive care for growing smiles in a
-                                    comfortable Midtown setting
-                                </li>
-                            </ul>
-                        </div>
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-tools-kitchen-2"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Prevents Shifting</span>
+                                </div>
 
-                        <a
-                            href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
-                            class="service-link service-link-button"
-                        >
-                            Learn More About Pediatric Orthodontics
-                            <i class="ti ti-arrow-right" aria-hidden="true"></i>
-                        </a>
-
-                        <div class="patient-insights">
-                            <div class="patient-insights-header">
-                                <span class="patient-insights-label">
-                                    <i class="ti ti-message-circle"></i>
-                                    What Parents Often Ask
-                                </span>
-                                <h4>
-                                    Common Questions About Pediatric
-                                    Orthodontics
-                                </h4>
-                            </div>
-
-                            <div class="mini-faq-item active">
-                                <button
-                                    class="mini-faq-question"
-                                    type="button"
-                                    aria-expanded="true"
-                                >
-                                    <span
-                                        >When should my child first see an
-                                        orthodontist?</span
-                                    >
-                                    <i class="ti ti-chevron-down"></i>
-                                </button>
-                                <div class="mini-faq-answer">
-                                    <p>
-                                        Many children benefit from an early
-                                        orthodontic evaluation around age 7,
-                                        when permanent teeth are beginning to
-                                        come in and jaw growth can be assessed.
-                                        Early visits do not always mean early
-                                        treatment; sometimes monitoring is the
-                                        best next step.
-                                    </p>
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-scan"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Long-Term Protection</span>
                                 </div>
                             </div>
+                            <div class="service-highlights">
+                                <div class="service-highlights-title">
+                                    <i class="ti ti-sparkles"></i>
+                                    Why Patients Choose Custom Retainers
+                                </div>
 
-                            <div class="mini-faq-item">
-                                <button
-                                    class="mini-faq-question"
-                                    type="button"
-                                    aria-expanded="false"
+                                <ul
+                                    class="service-points enhanced-service-points"
                                 >
-                                    <span
-                                        >Does early orthodontic care prevent
-                                        braces later?</span
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Custom-crafted for a secure and
+                                        comfortable fit
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Helps prevent unwanted tooth movement
+                                        after treatment
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Suitable for patients who completed
+                                        Invisalign® or braces
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Durable materials designed for everyday
+                                        wear
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Protects your investment in a
+                                        straighter, healthier smile
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a
+                                href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
+                                class="service-link service-link-button"
+                            >
+                                Learn More About Retainers
+                                <i
+                                    class="ti ti-arrow-right"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+
+                            <div class="patient-insights">
+                                <div class="patient-insights-header">
+                                    <span class="patient-insights-label">
+                                        <i class="ti ti-message-circle"></i>
+                                        What Patients Often Ask
+                                    </span>
+                                    <h4>Common Questions About Retainers</h4>
+                                </div>
+
+                                <div class="mini-faq-item active">
+                                    <button
+                                        class="mini-faq-question"
+                                        type="button"
+                                        aria-expanded="true"
                                     >
-                                    <i class="ti ti-chevron-down"></i>
-                                </button>
-                                <div class="mini-faq-answer">
-                                    <p>
-                                        Early care may help guide jaw
-                                        development, create space for incoming
-                                        teeth, or reduce the complexity of
-                                        future treatment. Some children may
-                                        still need braces or aligners later, but
-                                        early evaluation helps parents make
-                                        informed decisions at the right time.
-                                    </p>
+                                        <span
+                                            >Do I really need to wear a retainer
+                                            after treatment?</span
+                                        >
+                                        <i class="ti ti-chevron-down"></i>
+                                    </button>
+                                    <div class="mini-faq-answer">
+                                        <p>
+                                            Yes. Teeth naturally tend to shift
+                                            over time, even after successful
+                                            orthodontic treatment. Wearing your
+                                            retainer as directed helps preserve
+                                            your new alignment and protects the
+                                            time, effort, and investment you've
+                                            made in your smile.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="mini-faq-item">
+                                    <button
+                                        class="mini-faq-question"
+                                        type="button"
+                                        aria-expanded="false"
+                                    >
+                                        <span
+                                            >Can I get a replacement retainer if
+                                            mine is lost or damaged?</span
+                                        >
+                                        <i class="ti ti-chevron-down"></i>
+                                    </button>
+                                    <div class="mini-faq-answer">
+                                        <p>
+                                            Absolutely. If your retainer is
+                                            lost, broken, or no longer fits
+                                            properly, our team can evaluate your
+                                            smile and provide a replacement
+                                            retainer to help maintain your
+                                            orthodontic results.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="service-visual enhanced-service-visual">
-                        <img
-                            src="https://bluewhaledental.com/wp-content/uploads/2024/10/Discreet-Appearance.jpg"
-                            alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC"
-                        />
 
-                        <div class="service-floating-badge">
-                            <i class="ti ti-sparkles" aria-hidden="true"></i>
-                            Early Smile Development
+                    <!-- Block 4: Pediatric Orthodontics -->
+                    <div class="service-block service-feature-card sticky-service-card">
+                        <div class="service-text enhanced-service-text">
+                            <span class="service-eyebrow"
+                                >Early, Gentle Care</span
+                            >
+
+                            <h3 class="service-title">
+                                Pediatric Orthodontics
+                            </h3>
+
+                            <p class="service-desc">
+                                Pediatric orthodontics helps identify developing
+                                bite, spacing, and jaw growth concerns while a
+                                child’s smile is still growing. With early
+                                evaluation and a gentle, kid-friendly approach,
+                                our team helps parents understand whether
+                                treatment is needed now, later, or simply
+                                monitored over time.
+                            </p>
+
+                            <div class="service-benefit-grid">
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-eye-off"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Early Evaluation</span>
+                                </div>
+
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-tools-kitchen-2"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Kid-Friendly Care</span>
+                                </div>
+
+                                <div class="service-benefit-card">
+                                    <i
+                                        class="ti ti-scan"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span>Growth Guidance</span>
+                                </div>
+                            </div>
+                            <div class="service-highlights">
+                                <div class="service-highlights-title">
+                                    <i class="ti ti-sparkles"></i>
+                                    Why Parents Choose Pediatric Orthodontics
+                                </div>
+
+                                <ul
+                                    class="service-points enhanced-service-points"
+                                >
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Early evaluation to monitor jaw growth
+                                        and tooth development
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Gentle, child-friendly visits designed
+                                        to reduce dental anxiety
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Helps identify crowding, spacing, bite,
+                                        and growth concerns early
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Personalized guidance for whether
+                                        treatment is needed now or later
+                                    </li>
+
+                                    <li>
+                                        <i class="ti ti-circle-check"></i>
+                                        Supportive care for growing smiles in a
+                                        comfortable Midtown setting
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a
+                                href="https://bluewhaledental.com/invisalign-aligners-in-midtown-nyc/"
+                                class="service-link service-link-button"
+                            >
+                                Learn More About Pediatric Orthodontics
+                                <i
+                                    class="ti ti-arrow-right"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+
+                            <div class="patient-insights">
+                                <div class="patient-insights-header">
+                                    <span class="patient-insights-label">
+                                        <i class="ti ti-message-circle"></i>
+                                        What Parents Often Ask
+                                    </span>
+                                    <h4>
+                                        Common Questions About Pediatric
+                                        Orthodontics
+                                    </h4>
+                                </div>
+
+                                <div class="mini-faq-item active">
+                                    <button
+                                        class="mini-faq-question"
+                                        type="button"
+                                        aria-expanded="true"
+                                    >
+                                        <span
+                                            >When should my child first see an
+                                            orthodontist?</span
+                                        >
+                                        <i class="ti ti-chevron-down"></i>
+                                    </button>
+                                    <div class="mini-faq-answer">
+                                        <p>
+                                            Many children benefit from an early
+                                            orthodontic evaluation around age 7,
+                                            when permanent teeth are beginning
+                                            to come in and jaw growth can be
+                                            assessed. Early visits do not always
+                                            mean early treatment; sometimes
+                                            monitoring is the best next step.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="mini-faq-item">
+                                    <button
+                                        class="mini-faq-question"
+                                        type="button"
+                                        aria-expanded="false"
+                                    >
+                                        <span
+                                            >Does early orthodontic care prevent
+                                            braces later?</span
+                                        >
+                                        <i class="ti ti-chevron-down"></i>
+                                    </button>
+                                    <div class="mini-faq-answer">
+                                        <p>
+                                            Early care may help guide jaw
+                                            development, create space for
+                                            incoming teeth, or reduce the
+                                            complexity of future treatment. Some
+                                            children may still need braces or
+                                            aligners later, but early evaluation
+                                            helps parents make informed
+                                            decisions at the right time.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-visual enhanced-service-visual">
+                            <img
+                                src="https://bluewhaledental.com/wp-content/uploads/2024/10/Discreet-Appearance.jpg"
+                                alt="Invisalign Clear Aligners at Blue Whale Dental Midtown NYC"
+                            />
+
+                            <div class="service-floating-badge">
+                                <i
+                                    class="ti ti-sparkles"
+                                    aria-hidden="true"
+                                ></i>
+                                Early Smile Development
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- ==========================================
+                    <!-- ==========================================
                TREATMENT COMPARISON TABLE
                ========================================== -->
-                <div class="compare-wrap">
-                    <div class="compare-header">
-                        <span class="section-eyebrow"
-                            >Side-by-Side Comparison</span
-                        >
-                        <h3 class="section-title" style="font-size: 1.9rem">
-                            Invisalign® vs. Traditional Braces
-                        </h3>
-                        <p class="section-subtitle">
-                            Not sure which option fits your lifestyle? Here's a
-                            quick comparison to help guide your conversation
-                            with our orthodontic team.
-                        </p>
+                    <div class="compare-wrap">
+                        <div class="compare-header">
+                            <span class="section-eyebrow"
+                                >Side-by-Side Comparison</span
+                            >
+                            <h3 class="section-title" style="font-size: 1.9rem">
+                                Invisalign® vs. Traditional Braces
+                            </h3>
+                            <p class="section-subtitle">
+                                Not sure which option fits your lifestyle?
+                                Here's a quick comparison to help guide your
+                                conversation with our orthodontic team.
+                            </p>
+                        </div>
+
+                        <table class="compare-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>
+                                        <i
+                                            class="ti ti-dental"
+                                            aria-hidden="true"
+                                        ></i
+                                        >Invisalign® Clear Aligners
+                                    </th>
+                                    <th>
+                                        <i
+                                            class="ti ti-circle-dot"
+                                            aria-hidden="true"
+                                        ></i
+                                        >Traditional Braces
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Appearance</td>
+                                    <td>
+                                        Nearly invisible, clear plastic trays
+                                    </td>
+                                    <td>
+                                        Visible metal or ceramic brackets and
+                                        wires
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Removability</td>
+                                    <td>
+                                        Fully removable for eating, brushing
+                                        &amp; flossing
+                                    </td>
+                                    <td>
+                                        Fixed in place for the full treatment
+                                        duration
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Best For</td>
+                                    <td>
+                                        Mild to moderate alignment issues, busy
+                                        professionals
+                                    </td>
+                                    <td>
+                                        Complex bite and alignment cases, all
+                                        ages
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Maintenance</td>
+                                    <td>Easy cleaning, no food restrictions</td>
+                                    <td>
+                                        Requires care around certain foods and
+                                        extra brushing
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Check-In Visits</td>
+                                    <td>Periodic digital progress check-ins</td>
+                                    <td>
+                                        Regular in-office adjustment
+                                        appointments
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <table class="compare-table">
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>
-                                    <i
-                                        class="ti ti-dental"
-                                        aria-hidden="true"
-                                    ></i
-                                    >Invisalign® Clear Aligners
-                                </th>
-                                <th>
-                                    <i
-                                        class="ti ti-circle-dot"
-                                        aria-hidden="true"
-                                    ></i
-                                    >Traditional Braces
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Appearance</td>
-                                <td>Nearly invisible, clear plastic trays</td>
-                                <td>
-                                    Visible metal or ceramic brackets and wires
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Removability</td>
-                                <td>
-                                    Fully removable for eating, brushing &amp;
-                                    flossing
-                                </td>
-                                <td>
-                                    Fixed in place for the full treatment
-                                    duration
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Best For</td>
-                                <td>
-                                    Mild to moderate alignment issues, busy
-                                    professionals
-                                </td>
-                                <td>
-                                    Complex bite and alignment cases, all ages
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maintenance</td>
-                                <td>Easy cleaning, no food restrictions</td>
-                                <td>
-                                    Requires care around certain foods and extra
-                                    brushing
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Check-In Visits</td>
-                                <td>Periodic digital progress check-ins</td>
-                                <td>
-                                    Regular in-office adjustment appointments
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- ==========================================
+                    <!-- ==========================================
                TREATMENT FINDER BY AGE
                ========================================== -->
-                <!-- <div class="finder-wrap enhanced-finder-wrap">
+                    <!-- <div class="finder-wrap enhanced-finder-wrap">
                 <div class="section-header">
                     <span class="section-eyebrow">Not Sure Where to Start?</span>
                     <h3 class="section-title" style="font-size: 1.9rem;">Find the Right Orthodontic Fit by Age &amp;
@@ -4276,73 +4433,74 @@
                     </a>
                 </div>
             </div> -->
-                <!-- ==========================================
+                    <!-- ==========================================
                TREATMENT FINDER BY AGE
                ========================================== -->
-                <div class="finder-wrap">
-                    <div class="section-header">
-                        <span class="section-eyebrow"
-                            >Not Sure Where to Start?</span
-                        >
-                        <h3 class="section-title" style="font-size: 1.9rem">
-                            Find the Right Fit by Age &amp; Goal
-                        </h3>
-                        <p class="section-subtitle">
-                            Orthodontic needs change over time. Here's a general
-                            guide to which treatments tend to fit different
-                            stages of life your consultation will confirm what's
-                            right for you.
-                        </p>
-                    </div>
+                    <div class="finder-wrap">
+                        <div class="section-header">
+                            <span class="section-eyebrow"
+                                >Not Sure Where to Start?</span
+                            >
+                            <h3 class="section-title" style="font-size: 1.9rem">
+                                Find the Right Fit by Age &amp; Goal
+                            </h3>
+                            <p class="section-subtitle">
+                                Orthodontic needs change over time. Here's a
+                                general guide to which treatments tend to fit
+                                different stages of life your consultation will
+                                confirm what's right for you.
+                            </p>
+                        </div>
 
-                    <div class="finder-grid">
-                        <div class="finder-card">
-                            <div class="finder-age">Ages 7&ndash;10</div>
-                            <div class="finder-label">Early Evaluation</div>
-                            <div class="finder-treatment">
-                                Pediatric Orthodontics
+                        <div class="finder-grid">
+                            <div class="finder-card">
+                                <div class="finder-age">Ages 7&ndash;10</div>
+                                <div class="finder-label">Early Evaluation</div>
+                                <div class="finder-treatment">
+                                    Pediatric Orthodontics
+                                </div>
+                                <p class="finder-desc">
+                                    Early screening can identify developing
+                                    bite, spacing, and jaw growth concerns while
+                                    your child’s smile is still growing.
+                                </p>
                             </div>
-                            <p class="finder-desc">
-                                Early screening can identify developing bite,
-                                spacing, and jaw growth concerns while your
-                                child’s smile is still growing.
-                            </p>
-                        </div>
-                        <div class="finder-card">
-                            <div class="finder-age">Teens</div>
-                            <div class="finder-label">Most Common</div>
-                            <div class="finder-treatment">
-                                Braces or Invisalign®
+                            <div class="finder-card">
+                                <div class="finder-age">Teens</div>
+                                <div class="finder-label">Most Common</div>
+                                <div class="finder-treatment">
+                                    Braces or Invisalign®
+                                </div>
+                                <p class="finder-desc">
+                                    Teens may benefit from braces or clear
+                                    aligners depending on alignment needs,
+                                    lifestyle, and treatment responsibility.
+                                </p>
                             </div>
-                            <p class="finder-desc">
-                                Teens may benefit from braces or clear aligners
-                                depending on alignment needs, lifestyle, and
-                                treatment responsibility.
-                            </p>
-                        </div>
-                        <div class="finder-card">
-                            <div class="finder-age">Adults</div>
-                            <div class="finder-label">
-                                Discreet &amp; Flexible
+                            <div class="finder-card">
+                                <div class="finder-age">Adults</div>
+                                <div class="finder-label">
+                                    Discreet &amp; Flexible
+                                </div>
+                                <div class="finder-treatment">
+                                    Invisalign® Clear Aligners
+                                </div>
+                                <p class="finder-desc">
+                                    A popular choice for busy professionals who
+                                    want straighter teeth with a more discreet,
+                                    removable treatment option.
+                                </p>
                             </div>
-                            <div class="finder-treatment">
-                                Invisalign® Clear Aligners
+                            <div class="finder-card">
+                                <div class="finder-age">Post-Treatment</div>
+                                <div class="finder-label">Maintain Results</div>
+                                <div class="finder-treatment">Retainers</div>
+                                <p class="finder-desc">
+                                    After braces or Invisalign®, custom
+                                    retainers help prevent shifting and keep
+                                    your smile beautifully aligned.
+                                </p>
                             </div>
-                            <p class="finder-desc">
-                                A popular choice for busy professionals who want
-                                straighter teeth with a more discreet, removable
-                                treatment option.
-                            </p>
-                        </div>
-                        <div class="finder-card">
-                            <div class="finder-age">Post-Treatment</div>
-                            <div class="finder-label">Maintain Results</div>
-                            <div class="finder-treatment">Retainers</div>
-                            <p class="finder-desc">
-                                After braces or Invisalign®, custom retainers
-                                help prevent shifting and keep your smile
-                                beautifully aligned.
-                            </p>
                         </div>
                     </div>
                 </div>
